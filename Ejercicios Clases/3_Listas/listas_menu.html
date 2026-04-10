@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista - Menu Horizontal</title>
+
+    <style>
+      :root {
+        background-color: black;
+        color: aliceblue;
+      }
+      ul {
+        list-style-type: none;
+        /* display: flex; */
+        /* background-color: #cdcdcd; */
+        padding: 10px;
+      }
+
+      ul li {
+        float: left;
+      }
+      li {
+        padding: 10px;
+        border: solid 3px #333;
+        width: 100px;
+        margin:  0px 1%;
+        text-align: center;
+        background-color: #343434;
+        border-radius: 5px 15px;
+        display: block;
+        
+      }
+
+      a:link{
+        color: aliceblue;
+      }
+      a:visited{
+        color: rgb(160, 161, 163);
+      }
+      a:hover{
+        color: aqua;
+      }
+      li:hover{
+        background-color: rgb(64, 55, 43);
+        box-shadow: 4px 3px 2px 0px rgb(94, 93, 92);
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <a href="https://www.w3schools.com/html/default.asp" target="_blank"><li>HTML</li></a>
+      <a href="https://www.w3schools.com/css/default.asp" target="_blank"><li>CSS</li></a>
+      <a href="https://www.w3schools.com/js/default.asp" target="_blank"><li>JavaScript</li></a>
+      <a href="https://www.w3schools.com/php/default.asp" target="_blank" rel="noopener noreferrer"><li>PHP</li></a>
+    </ul>
+  </body>
+</html>
