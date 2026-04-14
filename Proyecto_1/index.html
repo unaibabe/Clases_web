@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitabu</title>
+    <link rel="shortcut icon" href="./img/logo_libro.png" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+      header {
+        display: flex;
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(47, 47, 58);
+      }
+      .logo {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        margin-left: 850px;
+        height: 50px;
+      }
+      ul li {
+        height: 100%h;
+        width: 100px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        /* justify-items: center; */
+        justify-content: center;
+      }
+      ul li:hover {
+        background-color: rgb(23, 23, 23);
+        color: rgb(255, 255, 255);
+      }
+      .sub-lista-categorias {
+        display: none;
+      }
+      #arrow-down {
+        position: absolute;
+        cursor: pointer;
+        top: 12px;
+        right: 200px;
+      }
+
+      .paisaje {
+        width: 100%;
+        height: 80vh;
+      }
+      #boton-imagen {
+        width: 400px;
+        top: 200px;
+        left: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 50px;
+        font-size: 12px;
+        box-shadow: 0 0 8px black;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+      }
+      #boton-imagen:hover {
+        box-shadow: rgb(44, 44, 44);
+        transform: scale(1.05);
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+      .novedades-container {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+      }
+      #novedades {
+        /* background-color: rgb(54, 55, 55); */
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
+        font-weight: bold;
+      }
+      .contenedor-imagenes-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-columns: 25% 25% 25% 25% ; */
+        gap: 20px;
+        /* object-fit: cover; */
+      }
+      .portada-libros {
+        width: 100%;
+      }
+
+      #imagen-nacidos {
+        transition: 0.2s ease-in;
+      }
+      #imagen-nacidos:hover {
+        scale: 1.05;
+        /* box-shadow: 0px 0px 8px white; */
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .descripcion-libros p {
+        font-style: italic;
+        font-size: 12px;
+      }
+      .descripcion-libros h4,
+      .descripcion-libros p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      footer {
+        width: 100%;
+        height: 12vh;
+        background-color: rgb(41, 41, 41);
+        padding: 10px;
+      }
+      .container-footer {
+        display: flex;
+      }
+      .container-footer p {
+        font-size: 15px;
+        width: 100%;
+      }
+      .container-footer a {
+        font-size: 10px;
+        font-style: italic;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 10%;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header class="cabecera">
+      <a href="#"><img class="logo" src="./img/logo_libro.png" alt="" /></a>
+      <ul class="lista-menu">
+        <li class="menu-lateral">
+          Categorías
+          <img id="arrow-down" src="./img/arrow_drop_down.png" alt="" />
+          <ul class="sub-lista-categorias">
+            <li>Poesia</li>
+            <li>Ensayo</li>
+            <li>Novela</li>
+          </ul>
+        </li>
+        <li>Nosotros</li>
+        <li>Contacto</li>
+      </ul>
+    </header>
+    <div class="imagen-grande">
+      <img class="paisaje" src="./img/paisaje.jpg" alt="" />
+      <div id="boton-imagen">
+        Descubre las novedades para el proximo sant jordi
+      </div>
+    </div>
+    <nav>
+      <div class="novedades-container">
+        <h3 id="novedades">Novedades</h3>
+        <div class="contenedor-imagenes-grid">
+          <!-- imagen 1 -->
+          <div class="contenedor-imagenes-descripcion">
+            <div id="imagen-nacidos">
+              <img
+                class="portada-libros"
+                id="nacidos-de-la-bruma"
+                src="./img/nacidos de la brumaa.jpg"
+                alt=""
+              />
+            </div>
+            <div class="descripcion-libros">
+              <h4>Nacidos de la bruma</h4>
+              <p>Brandom Sanderson</p>
+            </div>
+          </div>
+          <!-- imagen 2 -->
+          <div class="imagenes-novedades">
+            <div id="imagen-nacidos">
+              <img
+                class="portada-libros"
+                id="nacidos-de-la-bruma"
+                src="./img/el pozo de la ascension.jpg"
+                alt=""
+              />
+            </div>
+            <div class="descripcion-libros">
+              <h4>Nacidos de la bruma</h4>
+              <p>Brandom Sanderson</p>
+            </div>
+          </div>
+          <!-- imagen 3 -->
+          <div class="imagenes-novedades">
+            <div id="imagen-nacidos">
+              <img
+                class="portada-libros"
+                id="nacidos-de-la-bruma"
+                src="./img/el hereoe de las eras.jpg"
+                alt=""
+              />
+            </div>
+            <div class="descripcion-libros">
+              <h4>Nacidos de la bruma</h4>
+              <p>Brandom Sanderson</p>
+            </div>
+          </div>
+          <!-- imagen 4 -->
+          <div class="imagenes-novedades">
+            <div id="imagen-nacidos">
+              <img
+                class="portada-libros"
+                id="nacidos-de-la-bruma"
+                src="./img/aleacion de ley.jpg"
+                alt=""
+              />
+            </div>
+            <div class="descripcion-libros">
+              <h4>Nacidos de la bruma</h4>
+              <p>Brandom Sanderson</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recomendaciones">
+        <div class="contenedor-recomendaciones">
+          <div class="imagen-recomendaciones">
+            <img src="./img/el archivo de las tormentas.jpg" alt="" />
+          </div>
+          <div class="descripcion-recomendaciones">
+            <h5>El archivo de las tormentas</h5>
+            <h6>Brandom Sanderson</h6>
+            <p>Traducción de pinguin random house</p>
+            <p>23€</p>
+            <p>
+              &lt;&lt;Brandom uno de los mejores autores de ficción que hay
+              &gt;&gt;
+            </p>
+            <p>IR AL LIBRO</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <footer>
+    <div class="container-footer">
+      <p>Kitabu</p>
+      <a href="#">Aviso Legal</a>
+      <a href="#">Protección de Datos</a>
+      <a href="#">Condiciones de Uso</a>
+    </div>
+  </footer>
+</html>
