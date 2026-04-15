@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kitabu</title>
     <link rel="shortcut icon" href="./img/logo_libro.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       * {
         margin: 0;
@@ -13,7 +23,9 @@
       body {
         background-color: black;
         color: white;
+        position: relative;
       }
+      /* ####### NAV ####### */
       header {
         display: flex;
         width: 100%;
@@ -32,7 +44,7 @@
         height: 50px;
       }
       ul li {
-        height: 100%h;
+        height: 100%;
         width: 100px;
         cursor: pointer;
         display: flex;
@@ -46,14 +58,14 @@
       }
       .sub-lista-categorias {
         display: none;
-      }
+      } 
       #arrow-down {
         position: absolute;
         cursor: pointer;
         top: 12px;
         right: 200px;
       }
-
+      /* ####### HEADER ####### */
       .paisaje {
         width: 100%;
         height: 80vh;
@@ -83,10 +95,12 @@
       nav {
         margin-top: 10px;
       }
+      /* ######### NOVEDADES ######### */
       .novedades-container {
         width: 90%;
         margin: auto;
         overflow: hidden;
+        margin-top: 40px;
       }
       #novedades {
         /* background-color: rgb(54, 55, 55); */
@@ -95,6 +109,7 @@
         align-items: center;
         padding-left: 2%;
         font-weight: bold;
+        margin-bottom: 20px;
       }
       .contenedor-imagenes-grid {
         display: grid;
@@ -132,6 +147,79 @@
         justify-content: center;
       }
 
+      /* ######### RECOMENDACIONES ######### */
+
+      .recomendaciones {
+        width: 90%;
+        margin: 40px auto;
+      }
+
+      .contenedor-recomendaciones {
+        margin-top: 40px; /* nota, recuerda poner este espacio tambien en novedades para que sean iguales*/
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        /* background-color: rgb(28, 41, 98); */
+      }
+
+      .imagen-recomendaciones {
+        width: 100%;
+        height: 100%;
+      }
+      .titulo-recomendaciones {
+        font-weight: bold;
+        font-size: 20px;
+        font-family: "Forum", serif;
+        margin-bottom: 5px;
+      }
+      .autor-recomendaciones {
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Forum", serif;
+      }
+      .descripcion-recomendaciones p {
+        font-style: italic;
+        font-size: 14px;
+        padding: 10px 0px;
+      }
+      .ir-a {
+        display: flex;
+        cursor: pointer;
+      }
+      .recomendaciones-arrow {
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+
+      #ir-a-libro {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: white;
+        text-underline-offset: 3px;
+        text-decoration: none;
+        position:relative
+      }
+      #ir-a-libro::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(243, 243, 243);
+        transform: scaleX(0);
+        width: 100%;
+        height: 1.5px;
+        transition: transform 0.3s ease-in ;
+      }
+      #ir-a-libro:hover::after{
+        transform: scaleX(1);
+      }
+
+      /* ############## FOOTER ################# */
       footer {
         width: 100%;
         height: 12vh;
@@ -142,8 +230,9 @@
         display: flex;
       }
       .container-footer p {
-        font-size: 15px;
+        font-size: 20px;
         width: 100%;
+        font-weight: bold;
       }
       .container-footer a {
         font-size: 10px;
@@ -155,8 +244,6 @@
         justify-content: end;
         width: 10%;
       }
-
-
     </style>
   </head>
   <body>
@@ -249,20 +336,67 @@
         </div>
       </div>
       <div class="recomendaciones">
+        <h3>Recomendaciones</h3>
         <div class="contenedor-recomendaciones">
-          <div class="imagen-recomendaciones">
-            <img src="./img/el archivo de las tormentas.jpg" alt="" />
+          <div class="contenedor-imagen-recomendaciones">
+            <img
+              class="imagen-recomendaciones"
+              src="./img/el archivo de las tormentas.jpg"
+              alt=""
+            />
           </div>
           <div class="descripcion-recomendaciones">
-            <h5>El archivo de las tormentas</h5>
-            <h6>Brandom Sanderson</h6>
-            <p>Traducción de pinguin random house</p>
+            <h5 class="titulo-recomendaciones">El archivo de las tormentas</h5>
+            <hr />
+            <h6 class="autor-recomendaciones">Brandom Sanderson</h6>
+            <p>Traducción de Penguin Random House</p>
             <p>23€</p>
             <p>
-              &lt;&lt;Brandom uno de los mejores autores de ficción que hay
-              &gt;&gt;
+              &lt;&lt;"El camino de los reyes" es la primera novela de la épica
+              saga de fantasía "El Archivo de las Tormentas", escrita por
+              Brandon Sanderson. Ambientada en el mundo de Roshar, marcado por
+              tormentas devastadoras, la historia sigue a personajes como
+              Kaladin, Dalinar y Shallan en una trama de guerra, magia antigua y
+              secretos peligrosos &gt;&gt;
             </p>
-            <p>IR AL LIBRO</p>
+            <div class="ir-a">
+              <p id="ir-a-libro">IR AL LIBRO</p>
+              <img
+                class="recomendaciones-arrow"
+                src="./img/arrow_right.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="contenedor-imagen-recomendaciones">
+            <img
+              class="imagen-recomendaciones"
+              src="./img/el archivo de las tormentas2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="descripcion-recomendaciones">
+            <h5 class="titulo-recomendaciones">Palabras Radiantes</h5>
+            <hr />
+            <h6 class="autor-recomendaciones">Brandom Sanderson</h6>
+            <p>Traducción de Penguin Random House</p>
+            <p>20€</p>
+            <p>
+              &lt;&lt;Palabras Radiantes es la segunda entrega de El Archivo de
+              las Tormentas de Brandon Sanderson. Kaladin, ahora capitán de la
+              guardia real, lucha con sus nuevos poderes y la lealtad; Shallan
+              busca detener el fin de la civilización tras el asesinato de
+              Jasnah; y Dalinar intenta unir a los altos príncipes ante el
+              regreso de una amenaza legendaria. &gt;&gt;
+            </p>
+            <div class="ir-a">
+              <p id="ir-a-libro">IR AL LIBRO</p>
+              <img
+                class="recomendaciones-arrow"
+                src="./img/arrow_right.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
