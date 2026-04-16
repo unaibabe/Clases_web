@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+/* ####### NAV ####### */
+header {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  background-color: rgb(47, 47, 58);
+}
+.titulo-logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+}
+h1 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+}
+
+.lista-menu {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+/*he pedido ayuda a la ia y me dijo que faltaba esto*/
+.lista-menu > li {
+  height: 100%;
+  width: auto;
+  padding: 0 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/*he pedido ayuda a la ia y me dijo que faltaba esto*/
+.lista-menu > li:hover {
+  background-color: rgb(23, 23, 23);
+  color: rgb(255, 255, 255);
+}
+
+.sub-lista-categorias {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(47, 47, 58);
+  flex-direction: column;
+  width: 150px;
+  height: auto;
+  padding: 0;
+  z-index: 10;
+}
+
+.sub-lista-categorias li {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#categorias:hover .sub-lista-categorias {
+  display: flex;
+}
+.sub-lista-categorias li:hover {
+  background-color: rgb(23, 23, 23);
+  color: rgb(200, 200, 200);
+}
+
+#arrow-down {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}
+/* ####### HEADER ####### */
+.imagen-grande {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.paisaje {
+  width: 100%;
+  height: 100%;
+}
+
+#boton-imagen {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  /* top: 50%;
+  left: 50%; */
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  box-shadow: 0 0 8px black;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+#boton-imagen:hover {
+  box-shadow:0 0 10px rgb(10, 59, 137);
+  transform: scale(1.05);
+}
+
+nav {
+  margin-top: 10px;
+}
+/* ######### NOVEDADES ######### */
+.novedades-container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 40px;
+}
+#novedades {
+  /* background-color: rgb(54, 55, 55); */
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.contenedor-imagenes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 25% 25% 25% 25% ; */
+  gap: 20px;
+  /* object-fit: cover; */
+}
+.portada-libros {
+  width: 100%;
+}
+
+#imagen-nacidos {
+  transition: 0.2s ease-in;
+}
+#imagen-nacidos:hover {
+  scale: 1.05;
+  /* box-shadow: 0px 0px 8px white; */
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.descripcion-libros p {
+  font-style: italic;
+  font-size: 12px;
+}
+.descripcion-libros h4,
+.descripcion-libros p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ######### RECOMENDACIONES ######### */
+
+.recomendaciones {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.contenedor-recomendaciones {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  /* background-color: rgb(28, 41, 98); */
+}
+
+.imagen-recomendaciones {
+  width: 100%;
+  height: 100%;
+}
+.titulo-recomendaciones {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Forum", serif;
+  margin-bottom: 5px;
+}
+.autor-recomendaciones {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Forum", serif;
+}
+.descripcion-recomendaciones p {
+  font-style: italic;
+  font-size: 14px;
+  padding: 10px 0px;
+}
+.ir-a {
+  display: flex;
+  cursor: pointer;
+}
+.recomendaciones-arrow {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#ir-a-libro {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 3px;
+  text-decoration: none;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  text-decoration-color: white;
+  color: white;
+}
+#ir-a-libro::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(243, 243, 243);
+  transform: scaleX(0);
+  width: 100%;
+  height: 1.5px;
+  transition: transform 0.3s ease-in;
+}
+#ir-a-libro:hover::after {
+  transform: scaleX(1);
+}
+
+/* ############## FOOTER ################# */
+footer {
+  width: 100%;
+  height: 12vh;
+  background-color: rgb(41, 41, 41);
+  padding: 10px;
+}
+.container-footer {
+  display: flex;
+}
+.container-footer p {
+  font-size: 20px;
+  width: 100%;
+  font-weight: bold;
+}
+.container-footer a {
+  font-size: 10px;
+  font-style: italic;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 10%;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .titulo-logo a {
+    background-image: url(./img/manuHamburguesa.png);
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .titulo-logo a:hover{
+    background-color: rgb(9, 32, 64);
+    border-radius: 8px;
+  }
+  .titulo-logo {
+    width: 100%;
+  }
+  .titulo-logo h1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  /* .imagen-grande{
+    position: relative;
+  }
+  #boton-imagen{
+    position: absolute;
+    display: flex;
+  } */
+
+  .contenedor-imagenes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contenedor-recomendaciones {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .container-footer a{
+    display: block;
+    margin-right: 10px;
+  }
+}

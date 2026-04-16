@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro_1</title>
+    <link rel="shortcut icon" href="./img/logo_libro.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+        position: relative;
+      }
+      /* ####### NAV ####### */
+      header {
+        display: flex;
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(47, 47, 58);
+      }
+      .titulo-logo {
+        width: 20%;
+        height: 100%;
+        display: flex;
+      }
+      h1 {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+      }
+      .logo {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+      }
+      .menu {
+        width: 100%;
+        height: 100%;
+      }
+
+      .lista-menu {
+        list-style: none;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+      }
+
+      .lista-menu > li {
+        height: 100%;
+        width: auto;
+        padding: 0 15px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .lista-menu > li:hover {
+        background-color: rgb(23, 23, 23);
+        color: rgb(255, 255, 255);
+      }
+
+      .sub-lista-categorias {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(47, 47, 58);
+        flex-direction: column;
+        width: 150px;
+        height: auto;
+        padding: 0;
+        z-index: 10;
+      }
+
+      .sub-lista-categorias li {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #categorias:hover .sub-lista-categorias {
+        display: flex;
+      }
+      .sub-lista-categorias li:hover {
+        background-color: rgb(23, 23, 23);
+        color: rgb(200, 200, 200);
+      }
+
+      #arrow-down {
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+      }
+      /* ####### HEADER ####### */
+      .paisaje {
+        width: 100%;
+        height: 80vh;
+      }
+      #boton-imagen {
+        width: 400px;
+        top: 200px;
+        left: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 50px;
+        font-size: 12px;
+        box-shadow: 0 0 8px black;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+      }
+      #boton-imagen:hover {
+        box-shadow: rgb(44, 44, 44);
+        transform: scale(1.05);
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+      /* ######### NOVEDADES ######### */
+      .novedades-container {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        margin-top: 40px;
+      }
+      #novedades {
+        /* background-color: rgb(54, 55, 55); */
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .contenedor-imagenes-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-columns: 25% 25% 25% 25% ; */
+        gap: 20px;
+        /* object-fit: cover; */
+      }
+      .portada-libros {
+        width: 100%;
+      }
+
+      #imagen-nacidos {
+        transition: 0.2s ease-in;
+      }
+      #imagen-nacidos:hover {
+        scale: 1.05;
+        /* box-shadow: 0px 0px 8px white; */
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .descripcion-libros p {
+        font-style: italic;
+        font-size: 12px;
+      }
+      .descripcion-libros h4,
+      .descripcion-libros p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ######### RECOMENDACIONES ######### */
+
+      .recomendaciones {
+        width: 90%;
+        margin: 40px auto;
+      }
+      h3 {
+        font-size: 80px;
+        text-align: center;
+        font-family: "Forum", serif;
+        margin-bottom: 40px;
+      }
+
+      .contenedor-recomendaciones {
+        margin-top: 40px;
+        display: flex;
+        width: 80%;
+        height: 400px;
+        margin: auto;
+      }
+
+      .imagen-recomendaciones {
+        width: 300px;
+        height: 100%;
+        margin-right: 50px;
+      }
+      .titulo-recomendaciones {
+        font-weight: bold;
+        font-size: 20px;
+        font-family: "Forum", serif;
+        margin-bottom: 5px;
+      }
+      .autor-recomendaciones {
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Forum", serif;
+      }
+      .descripcion-recomendaciones p {
+        font-style: italic;
+        font-size: 14px;
+        padding: 10px 0px;
+      }
+      .ir-a {
+        display: flex;
+        cursor: pointer;
+      }
+      .recomendaciones-arrow {
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+
+      #ir-a-libro {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: white;
+        text-underline-offset: 3px;
+        text-decoration: none;
+        position: relative;
+      }
+      a {
+        text-decoration: none;
+        text-decoration-color: white;
+        color: white;
+      }
+      #ir-a-libro::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(243, 243, 243);
+        transform: scaleX(0);
+        width: 100%;
+        height: 1.5px;
+        transition: transform 0.3s ease-in;
+      }
+      #ir-a-libro:hover::after {
+        transform: scaleX(1);
+      }
+      #btn-comprar{
+        background-color: rgb(26, 75, 190);
+        height: 30px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      /* ############## FOOTER ################# */
+      footer {
+        width: 100%;
+        height: 12vh;
+        background-color: rgb(41, 41, 41);
+        padding: 10px;
+      }
+      .container-footer {
+        display: flex;
+      }
+      .container-footer p {
+        font-size: 20px;
+        width: 100%;
+        font-weight: bold;
+      }
+      .container-footer a {
+        font-size: 10px;
+        font-style: italic;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="titulo-logo">
+        <a href="./index.html"
+          ><img class="logo" src="./img/logo_libro.png" alt=""
+        /></a>
+        <h1>Kitabu</h1>
+      </div>
+      <div class="menu">
+        <ul class="lista-menu">
+          <li id="categorias">
+            Categorías
+            <img id="arrow-down" src="./img/arrow_drop_down.png" alt="" />
+            <ul class="sub-lista-categorias">
+              <a href="./poesia.html"><li>Poesia</li></a>
+              <a href="./ensayo.html"><li>Ensayo</li></a>
+              <a href="./novela.html"><li>Novela</a></li>
+            </ul>
+          </li>
+          <li>Nosotros</li>
+          <a href="./contacto.html"><li>Contacto</li></a>
+        </ul>
+      </div>
+    </header>
+
+    <nav>
+      <div class="recomendaciones">
+        <h3>Libro 1</h3>
+        <div class="contenedor-recomendaciones">
+          <div class="contenedor-imagen-recomendaciones">
+            <img
+              class="imagen-recomendaciones"
+              src="./img/el archivo de las tormentas.jpg"
+              alt=""
+            />
+          </div>
+          <div class="descripcion-recomendaciones">
+            <h5 class="titulo-recomendaciones">El archivo de las tormentas</h5>
+            <hr />
+            <h6 class="autor-recomendaciones">Brandom Sanderson</h6>
+            <p>Traducción de Penguin Random House</p>
+            <p>23€</p>
+            <p>
+              El camino de los reyes" es la primera novela de la épica
+              saga de fantasía "El Archivo de las Tormentas", escrita por
+              Brandon Sanderson. Ambientada en el mundo de Roshar, marcado por
+              tormentas devastadoras, la historia sigue a personajes como
+              Kaladin, Dalinar y Shallan en una trama de guerra, magia antigua y
+              secretos peligrosos 
+            </p>
+           <div id="btn-comprar">
+              <h6>Comprar</h6>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <footer>
+    <div class="container-footer">
+      <p>Kitabu</p>
+      <a href="#">Aviso Legal</a>
+      <a href="#">Protección de Datos</a>
+      <a href="#">Condiciones de Uso</a>
+    </div>
+  </footer>
+</html>
