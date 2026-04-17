@@ -15,12 +15,114 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./estilos.css">
+    <style>
+      #novedades {
+        font-size: 20px;
+        color: rgb(31, 42, 253);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-family: "Forum";
+      }
+      .contenedor-nosotros h2{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Forum", serif;
+        font-size: 50px;
+      }
+       .contenedor-nosotros h5{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        font-family: "Forum", serif;
+        font-size: 10px;
+        font-style: italic;
+      }
+      .contenedor-btns-contacto{
+        margin:auto;
+        display: flex;
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .btn-contacto{
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        border-radius: 10px;
+        position: relative;
+        transition: 0.3s ease-in-out;
+
+      }
+      .btn-contacto:hover{
+        scale: 1.1  ;
+      }
+      #btn-tel{
+        background: #020024;
+        background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      }
+      #btn-mail{
+        background: #020024;
+        background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      }
+      #btn-local{
+        background: #020024;
+        background: linear-gradient(235deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      }
+      .btn-contacto p{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        position: relative;
+        top: 30%;
+        margin-top: 10px;
+        
+      }
+      .btn-contacto img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        scale: 1.1; 
+        top: 20px;
+        left: 40%;
+        
+      }
+      .text-contacto{
+        font-size: 20px;
+      }
+      #numero-telf{
+        font-family: "Forum";
+        font-style: italic;
+      }
+      .contenedor-mapa{
+        width: 46%;
+        height: 300px;
+        margin: auto;
+        background-color: blue;
+        border-radius: 15px;
+        margin-bottom: 20px;
+      }
+      .contenedor-mapa iframe{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        
+      }
     </style>
   </head>
   <body>
     <header class="cabecera">
       <div class="titulo-logo">
-        <a href="#"><img class="logo" src="./img/logo_libro.png" alt="" /></a>
+        <a href="./index.html"><img class="logo" src="./img/logo_libro.png" alt="" /></a>
         <h1>Kitabu</h1>
       </div>
       <div class="menu">
@@ -40,69 +142,38 @@
       </div>
     </header>
     <nav>
-      <div class="novedades-container">
+      <div class="contenedor-contacto">
         <h3 id="novedades">Nosotros</h3>
-        <div class="contenedor-imagenes-grid">
-          <!-- imagen 1 -->
-          <div class="contenedor-imagenes-descripcion">
-            <div id="imagen-nacidos">
-              <img
-                class="portada-libros"
-                id="nacidos-de-la-bruma"
-                src="./img/nacidos de la brumaa.jpg"
-                alt=""
-              />
+        <div class="contenedor-nosotros">
+          <h2>Estate en contacto con nosotros</h2>
+          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fuga sit, sed vero, nobis ipsa, iste alias facere eligendi aliquam incidunt omnis nemo quisquam? Accusamus dicta dolorum dolore vel voluptatibus.
+          Inventore, vel doloremque quo doloribus adipisci eius itaque ipsa magnam cupiditate praesentium, voluptatum autem totam molestias quidem vitae pariatur tempora recusandae? Eum, eligendi saepe! Distinctio consequatur corporis omnis ipsa perferendis?
+          Temporibus dicta dolore dignissimos doloremque eveniet iusto dolorum voluptas beatae aliquam fugit placeat ipsum voluptatem cumque iure recusandae earum, sed incidunt hic doloribus distinctio ratione quae id? Nemo, veniam velit.
+          Dicta iure asperiores id sapiente reprehenderit vero consequatur, labore impedit explicabo velit minus libero? Molestiae, repellat illo ipsum harum earum nesciunt dolore eius modi animi iure aperiam repellendus reiciendis laudantium?
+          Error voluptatibus illo ab minus impedit rerum enim excepturi nam accusamus facilis! Vel illo eum, nostrum assumenda recusandae repellat veniam totam delectus inventore, earum iusto cum reprehenderit voluptas quam beatae.</h5>
+          <div class="contenedor-btns-contacto">
+            <!-- boton-1 -->
+            <div  id="btn-tel" class="btn-contacto">
+              <img src="./img/phone.png" alt="">
+              <p class="text-contacto">Phone</p>
+              <p id="numero-telf">+34612345678</p>
             </div>
-            <div class="descripcion-libros">
-              <h4>Nacidos de la bruma</h4>
-              <p>Brandom Sanderson</p>
+            <div  id="btn-mail" class="btn-contacto">
+              <img src="./img/mail.png" alt="">
+              <p class="text-contacto">Email</p>
+              <p id="numero-telf">talcual@mail.com</p>
+          </div>
+               <div id="btn-local" class="btn-contacto">
+              <img src="./img/location.png" alt="">
+              <p class="text-contacto">Local</p>
+              <p id="numero-telf">calle falsa 123</p>
             </div>
           </div>
-          <!-- imagen 2 -->
-          <div class="imagenes-novedades">
-            <div id="imagen-nacidos">
-              <img
-                class="portada-libros"
-                id="nacidos-de-la-bruma"
-                src="./img/el pozo de la ascension.jpg"
-                alt=""
-              />
-            </div>
-            <div class="descripcion-libros">
-              <h4>Nacidos de la bruma</h4>
-              <p>Brandom Sanderson</p>
-            </div>
-          </div>
-          <!-- imagen 3 -->
-          <div class="imagenes-novedades">
-            <div id="imagen-nacidos">
-              <img
-                class="portada-libros"
-                id="nacidos-de-la-bruma"
-                src="./img/el hereoe de las eras.jpg"
-                alt=""
-              />
-            </div>
-            <div class="descripcion-libros">
-              <h4>Nacidos de la bruma</h4>
-              <p>Brandom Sanderson</p>
-            </div>
-          </div>
-          <!-- imagen 4 -->
-          <div class="imagenes-novedades">
-            <div id="imagen-nacidos">
-              <img
-                class="portada-libros"
-                id="nacidos-de-la-bruma"
-                src="./img/aleacion de ley.jpg"
-                alt=""
-              />
-            </div>
-            <div class="descripcion-libros">
-              <h4>Nacidos de la bruma</h4>
-              <p>Brandom Sanderson</p>
-            </div>
-          </div>
+        </div>
+        <div class="contenedor-mapa">
+          <!-- mapa sacado de esta pagina que los crea solos -->
+           <!-- https://maps-website.com/es -->
+          <iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=carrer%20de%20la%20muntaya%201%20+(Pau%20casals)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://mapswebsite.net/es'>mapswebsite.net</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=577a27e414a34cac9523db442d45952e06a6b7dc'></script>
         </div>
       </div>
     </nav>

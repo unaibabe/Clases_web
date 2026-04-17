@@ -125,6 +125,7 @@ h1 {
   box-shadow: 0 0 8px black;
   cursor: pointer;
   transition: 0.2s ease-in;
+  z-index: 1;
 }
 #boton-imagen:hover {
   box-shadow:0 0 10px rgb(10, 59, 137);
@@ -133,6 +134,23 @@ h1 {
 
 nav {
   margin-top: 10px;
+  position: relative;
+}
+.redes{
+  position: fixed;
+  width: 50px;
+  height: 300px;
+  background: #22C1C3;  
+  background: linear-gradient(46deg, rgba(34, 193, 195, 0.4) 0%, rgba(253, 187, 45, 0.7) 100%);
+  border-radius: 50px;
+  z-index: 1000;
+  top: 40%;
+  right: 0.5%;
+}
+.redes img{
+  width: 90%;
+  padding: 5px;
+  margin: 5px 2px;
 }
 /* ######### NOVEDADES ######### */
 .novedades-container {
@@ -341,6 +359,7 @@ footer {
 
   .container-footer a{
     display: block;
-    margin-right: 10px;
+    margin-right: 0 10px;
+
   }
 }
