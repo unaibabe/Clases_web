@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h3>Array bidimensional</h3>
+    </div>
+
+    <script>
+      const notas = [
+        ["maria", 9, 7],
+        ["Albert", 6, 8],
+        ["Eva", 5, 8],
+      ];
+
+      // document.write(`La nota de ${notas[1][0]} en la primera evaluacion es de ${notas[1][1]} y en la segunda evaluacion es de ${notas[1][2]} <br>`)
+
+      for (let i = 0; notas.length > i; i++) {
+        document.write(`Las notas de ${notas[i][0]}: `);
+        for (let j = 0; notas[i].length - 1 > j; j++) {
+          if (j == 1) {
+            document.write(`y de: ${notas[i][j + 1]} <br>`);
+          }
+          else{
+             document.write(`Son de: ${notas[i][j + 1]}, `)
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

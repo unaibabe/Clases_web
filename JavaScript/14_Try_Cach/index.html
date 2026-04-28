@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boton escuruudizo</title>
+  </head>
+  <style>
+    body {
+      position: relative;
+      background-color: black;
+      color: white;
+    }
+    .btn {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      /* background-color: aqua; */
+      border-radius: 50%;
+      background-image: url("./img/target.png");
+      background-position: center;
+      background-size: cover;
+      top: 50vh;
+      left: 50%;
+    }
+    #mostrar-puntos {
+      position: absolute;
+      top: 40vh;
+      left: 40%;
+      background-color: aqua;
+      width: 350px;
+      height: 80px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      visibility: hidden;
+    }
+  </style>
+  <body>
+    <button id="btn" class="btn"></button>
+    <p id="puntos">Score: 0</p>
+    <p id="timer">Tiempo restante: 10</p>
+    <p id="mostrar-puntos">TOTAL PUNTOS CONSEGUIDOS:</p>
+
+    <script>
+      // constantes del DOM
+      const boton = document.getElementById("btn");
+      const timer = document.getElementById("timer");
+      const puntos = document.getElementById("puntos");
+      const mostrar_puntos = document.getElementById("mostrar-puntos");
+
+      // variables
+      let puntaje = 0;
+      let tiempo = 10;
+
+      // FUNCIONES
+      function resetCrono() {
+        timer.innerHTML = `Tiempo restante: ${tiempo}`;
+        tiempo--;
+        if (tiempo < 0) {
+          tiempo = 10;
+          puntos.innerHTML = `Score: 0`;
+          puntaje = 0;
+        }
+
+        return tiempo;
+      }
+
+      function mover_boton() {
+        puntaje++;
+
+        let x = Math.floor(Math.random() * 100);
+        let y = Math.floor(Math.random() * 100);
+
+        boton.style.left = x + "%";
+        boton.style.top = Math.abs(y - 10) + "vh";
+
+        puntos.innerHTML = `Score: ${puntaje}`;
+      }
+
+      function moverSinPunto() {
+        let x = Math.floor(Math.random() * 100);
+        let y = Math.floor(Math.random() * 100);
+
+        boton.style.left = x + "%";
+        boton.style.top = Math.abs(y - 10) + "vh";
+
+        puntos.innerHTML = `Score: ${puntaje}`;
+      }
+
+      boton.addEventListener("mouseover", mover_boton);
+
+      // Si el tiempo llega a 0 resetear timer
+      if (tiempo <= 0) {
+        clearInterval(resetCrono);
+        mostrar_puntos.style.visibility = "visible";
+      } else {
+        setInterval(resetCrono, 1000);
+        setInterval(moverSinPunto, 2000);
+      }
+    </script>
+  </body>
+</html>
