@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <!-- Realiza en un fichero HTML un array bidimensional llamado facturas que contenga 
+    por cada elemento del array principal: el nombre del cliente y el importe de la factura. 
+    Pon, como mínimo, 4 elementos de manera que haya importes inferiores o superiores a 1000. 
+    Crea un listado de todas las facturas donde aparezcan línea a línea:
+•	El código de la factura, que será el índice del array más uno.
+•	El cliente.
+•	Y, el importe. -->
+
+<script>
+    const facturas = [
+        {cliente:"Ramirez",importe:1400},
+        {cliente:"Joseba",importe:1000},
+        {cliente:"Eustakio",importe:500},
+        {cliente:"Albarez",importe:400},
+        {cliente:"Gonzalez",importe:2000}
+    ]
+
+for (i=0;i < facturas.length;i++){
+    document.write(`Codigo factura: ${i+1}, cliente: ${facturas[i].cliente}, importe: ${facturas[i].importe} <br>`)
+}
+</script>
+</body>
+</html>

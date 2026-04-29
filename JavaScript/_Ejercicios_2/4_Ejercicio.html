@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <!-- Crea un Sistema de Control de Acceso a Servidores
+Contexto: Eres el administrador de sistemas de una empresa. Tienes una lista de empleados 
+representados como objetos. Cada empleado tiene un nombre, 
+un rol (ej: "admin", "usuario", "invitado") y un valor booleano llamado estaActivo.
+Objetivo: Crea una función llamada verificarAcceso que reciba dos argumentos:
+1.	empleado: Que extraerá de un array de objetos denominado listaEmpleados 
+con los datos de los trabajadores.
+2.	rolRequerido: Un string con el nombre del rol que tiene permiso para entrar 
+al servidor (por ejemplo, "admin").
+Requisitos del código:
+•	La función debe recorrer el array de empleados mediante un bucle.
+•	La condición para imprimir el nombre de un empleado por consola es: Que su rol coincida con 
+el rolRequerido Y ADEMÁS que el empleado esté activo (estaActivo sea true).
+•	Si se cumplen ambas condiciones, debe imprimir: "Acceso concedido para: [nombre]". -->
+
+    <p id="mensaje"></p>
+
+    <script>
+      const mensaje = document.getElementById("mensaje");
+
+      const empleados = [
+        { nombre: "Eukeni", rol: "admin", activo: true },
+        { nombre: "Joan", rol: "usuario", activo: true },
+        { nombre: "Carlos", rol: "invitado", activo: false },
+        { nombre: "Dani", rol: "usuario", activo: false },
+        { nombre: "Jordi", rol: "admin", activo: false },
+        { nombre: "Unai", rol: "admin", activo: true },
+      ];
+
+      function verificarAcceso(rolRequerido) {
+        for (verificacion of empleados) {
+          if (
+            rolRequerido == verificacion.rol &&
+            verificacion.activo === true
+          ) {
+            console.log("ESTAMOS ACTIVOS");
+            mensaje.innerHTML += `Acceso concedido para: ${verificacion.nombre} con rol ${verificacion.rol}<br>`;
+          }
+        }
+      }
+      const listaEmpleados = [];
+      verificarAcceso("admin");
+    </script>
+  </body>
+</html>
