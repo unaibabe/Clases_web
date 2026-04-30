@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        placeholder="nombre"
+        onfocus="resaltar(this)"
+        onblur="limpiar(this)"
+      />
+      <label for="apellido">Apellido</label>
+      <input
+        type="text"
+        placeholder="apellido"
+        onfocus="resaltar(this)"
+        onblur="limpiar(this)"
+      />
+      <label for="sapellido">Segundo apellido</label>
+      <input
+        type="text"
+        placeholder="Segundo Apellido"
+        onfocus="resaltar(this)"
+        onblur="limpiar(this)"
+      />
+    </form>
+
+    <script>
+        function resaltar(input){
+            input.style.backgroundColor = "yellow"
+        }
+        function limpiar(input){
+            input.style.backgroundColor = "red"
+        }
+    </script>
+  </body>
+</html>
