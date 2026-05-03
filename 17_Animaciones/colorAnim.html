@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animaciones</title>
+    <style>
+      .contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        
+      }
+      body {
+        
+        background-color: black;
+        color: aliceblue;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+      }
+      #capita {
+        background: #2f42a1;
+        /* background: linear-gradient(
+          182deg,
+          rgba(47, 66, 161, 1) 0%,
+          rgba(102, 89, 222, 1) 20%,
+          rgb(41, 63, 162) 42%,
+          rgba(76, 70, 252, 1) 90%
+        ); */
+        width: 150px;
+        background-color: rgb(41, 41, 115);
+        height: 50px;
+        border: solid 1px black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 2s ease-in-out;
+      }
+      #capita:hover {
+        box-shadow: 5px 5px 20px 5px rgb(74, 105, 186);
+        background-color: aqua;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div id="capita">BOTON</div>
+    </div>
+  </body>
+</html>

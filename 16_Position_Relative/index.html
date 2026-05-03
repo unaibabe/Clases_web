@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position-Relative</title>
+    <style>
+      * {
+        margin: 0px;
+        color: aliceblue;
+      }
+      body {
+        background-color: #0f172a;
+      }
+      .contenedor {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(5, 210px);
+        /* background-color: aqua;
+        height: 100%;
+        width: 100%; */
+      }
+      .tarjeta {
+        background-color: #1e293b;
+        width: 200px;
+        height: 300px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #00030c;
+        /* border: solid 2px rgb(24, 21, 81); */
+        transition: transform 0.3s ease-in-out;
+      }
+      .tarjeta:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 30px #3356bf;
+        transition: transform ;
+      }
+      #oferta {
+        background-color: #6366f1;
+        width: 90px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: solid 1.5px white; */
+        border-radius: 10px;
+        position: relative;
+        margin-left: 90px;
+        margin-top: 5px;
+        z-index: 1000;
+        position: absolute;
+      }
+      #oferta:hover {
+        background-color: blueviolet;
+      }
+
+      img {
+        width: 100%;
+        height: 50%;
+        border-radius: 10px 10px 0px 0px;
+      }
+      .precio {
+        margin-left: 75%;
+      }
+      .texto {
+        text-align: center;
+      }
+      h3 {
+        color: #f8fafc;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        margin-top: 7px;
+      }
+      p {
+        color: #94a3b8;
+        text-align: justify;
+        padding: 5px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="tarjeta">
+        <div id="oferta">Oferta</div>
+        <img src="./img/zapatillas_3.jpg" alt="" />
+        <div class="precio">49.99€</div>
+        <div class="texto">
+          <h3>Zapatilla Molonas</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <div id="oferta">Oferta</div>
+        <img src="./img/zapatillas_1.webp" alt="" />
+        <div class="precio">49.99€</div>
+        <div class="texto">
+          <h3>Zapatilla Molonas</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <div id="oferta">Oferta</div>
+        <img src="./img/zapatillas_2.jpeg" alt="" />
+        <div class="precio">49.99€</div>
+        <div class="texto">
+          <h3>Zapatilla Molonas</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <div id="oferta">Oferta</div>
+        <img src="./img/zapatillas_3.jpg" alt="" />
+        <div class="precio">49.99€</div>
+        <div class="texto">
+          <h3>Zapatilla Molonas</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <div id="oferta">Oferta</div>
+        <img src="./img/zapatillas_1.webp" alt="" />
+        <div class="precio">49.99€</div>
+        <div class="texto">
+          <h3>Zapatilla Molonas</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <div id="oferta">Oferta</div>
+        <img src="./img/zapatillas_1.webp" alt="" />
+        <div class="precio">49.99€</div>
+        <div class="texto">
+          <h3>Zapatilla Molonas</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

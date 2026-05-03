@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <!-- Etiqueta para hacer formularios es from -->
+    <form action="" method="post">
+      <!-- for del label e id del input deben coincidir para accesibilidad -->
+      <label for="nombre">Nombre:</label>
+      <!-- placeholder sirve para dejar el nombre en la Etiqueta -->
+      <input type="text" id="nombre" placeholder="Nombre" />
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" min="18" max="65"/><br />
+
+      <label for="email">Email:</label>
+      <input type="email" name="" id="email" /><br />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" /><br />
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" /><br />
+
+      <label for="fichero">Cargar fichero:</label>
+      <input type="file" id="fichero" /><br />
+
+      <label for="tel">Telefono:</label>
+      <input type="tel" id="tel" /><br />
+
+      <input type="checkbox" id="tel" />
+      <label for="newsletter">Aceptas</label><br />
+
+      <!-- value es texto que se pone dentro del boton -->
+      <input type="submit" value="Enviar" />
+      <!-- Tambien se puede hacer de esta manera -->
+      <!-- <button type="submit">Submit</button> -->
+    </form>
+  </body>
+</html>

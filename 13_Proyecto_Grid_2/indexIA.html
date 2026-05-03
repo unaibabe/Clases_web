@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout con CSS Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: aliceblue;
+      display: grid;
+      /* Definimos las filas: header(50px), el resto(libre), footer(50px) */
+      grid-template-rows: 50px 1fr 50px;
+      /* Definimos las columnas: sidebar(20%) y main(80%) */
+      grid-template-columns: 20% 1fr;
+      /* Espacio entre las celdas */
+      gap: 10px;
+      min-height: 100vh;
+      padding: 10px;
+    }
+
+    /* Colocamos cada elemento en su sitio */
+    header {
+      background-color: rgb(9, 9, 81);
+      grid-column: 1 / -1; /* Que ocupe de la primera a la última columna */
+      display: flex; justify-content: center; align-items: center;
+    }
+
+    aside {
+      background-color: rgb(4, 35, 108);
+      display: flex; justify-content: center; align-items: center;
+    }
+
+    main {
+      background-color: rgb(124, 154, 180);
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: grey;
+      grid-column: 1 / -1; /* Que ocupe todo el ancho igual que el header */
+      display: flex; justify-content: center; align-items: center;
+    }
+
+    /* RESPONSIVE: En móvil cambiamos la rejilla por completo */
+    @media (max-width: 640px) {
+      body {
+        /* Ahora solo queremos 1 columna y que las filas se ajusten solas */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+      }
+
+      /* Como ahora solo hay una columna, todo se apila solo en orden */
+      aside {
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Cabecera (Header)</header>
+  <aside>Sidebar</aside>
+  <main>
+    <h1>Contenedor Principal</h1>
+    <p>Diseño hecho con CSS Grid: más limpio y con menos HTML.</p>
+  </main>
+  <footer>Pie de Pagina (footer)</footer>
+</body>
+</html>
