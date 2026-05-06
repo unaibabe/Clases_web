@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let resultado = "";
+      let a = false;
+      let b = true;
+
+      if (a || (b && !a)) {
+        resultado = "Verdadero";
+      } else {
+        resultado = "Falso";
+      }
+
+      console.log(resultado);
+    </script>
+
+    <script>
+      let total = 0;
+      let limite = 3;
+
+      for (let i = 1; i <= limite; i++) {
+        if (i % 2 !== 0) {
+          total += i;
+        }
+      }
+
+      console.log(total);
+    </script>
+
+    <script>
+      let dia = "martes";
+      let mensaje = "";
+
+      switch (dia) {
+        case "lunes":
+          mensaje = "Inicio de semana";
+        case "martes":
+        case "miercoles":
+          mensaje = "Mediados de semana";
+        case "jueves":
+          mensaje = "Casi fin de semana";
+          break;
+        default:
+          mensaje = "Fin de semana";
+      }
+
+      console.log(mensaje);
+    </script>
+
+    <script>
+      let contador = 0;
+      let suma = 0;
+
+      do {
+        suma += contador;
+        contador++;
+      } while (contador <= 3);
+
+      console.log(suma);
+    </script>
+  </body>
+</html>

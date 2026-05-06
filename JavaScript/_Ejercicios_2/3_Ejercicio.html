@@ -58,14 +58,20 @@
       button {
         background-color: rgb(20, 35, 101);
         border-radius: 10px;
-        width: 100px;
+        width: 90px;
         height: 35px;
         color: white;
         border: none;
         cursor: pointer;
       }
       button:hover {
-        background-color: aqua;
+        background-color: rgb(40, 91, 157);
+        border: solid 1px black;
+      }
+      input:focus{
+        outline: none;
+        /* border: 1px solid  rgb(75, 76, 78); */
+        box-shadow: 0 0 5px rgba(76, 175, 80);
       }
       #mensaje {
         width: 80%;
@@ -120,8 +126,10 @@
             mensaje.innerHTML = `El precio de ${objeto} es de ${elemento.precio} €`;
             break;
           } else {
+            mensaje.style.color = "orange";
             mensaje.innerHTML = "No tenemos ese producto";
           }
+          // break;
         }
       }
       boton.addEventListener("click", function () {

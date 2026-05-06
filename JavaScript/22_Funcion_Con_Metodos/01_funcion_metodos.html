@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this en Prototipos</title>
+    <style>
+      :root {
+        --bg-color: #f4f7f6;
+        --code-bg: #2d2d2d;
+        --accent: #3498db; /* Azul para prototipos y objetos */
+        --text-color: #333;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      h3 {
+        border-left: 5px solid var(--accent);
+        padding-left: 15px;
+        margin-top: 30px;
+        color: #555;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        color: #f8f8f2;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: "Consolas", monospace;
+        font-size: 0.95rem;
+      }
+
+      .explicacion {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 12px 24px;
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      #consola-simulada {
+        margin-top: 15px;
+        padding: 15px;
+        background-color: #eee;
+        border-radius: 5px;
+        font-family: monospace;
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>🏗️ "this" en Métodos Prototípicos</h3>
+    <div class="explicacion">
+      Al definir métodos en el <code>prototype</code>, <code>this</code> se refiere a la 
+      <strong>instancia específica</strong> del objeto que llama al método. Esto permite que todas las instancias compartan la misma función pero accedan a sus propios datos (como su nombre o edad), ahorrando memoria.
+    </div>
+
+    <h3>💻 Código del Ejemplo</h3>
+    <pre>
+function Persona(nombre, edad) {
+  this.nombre = nombre;
+  this.edad = edad;
+}
+
+Persona.prototype.saludar = function () {
+  return `Hola, soy ${this.nombre} y tengo ${this.edad} años`;
+};
+
+const persona2 = new Persona("Toni", 34);
+console.log(persona2.saludar());</pre>
+
+    <h3>🚀 Demo en vivo</h3>
+    <button id="btnEjecutar">Ejecutar persona2.saludar()</button>
+    <div id="consola-simulada">Haz clic en el botón para ver el resultado aquí...</div>
+
+    <script>
+      function Persona(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+      }
+
+      Persona.prototype.saludar = function () {
+        return `Hola, soy ${this.nombre} y tengo ${this.edad} años`;
+      };
+
+      const persona2 = new Persona("Toni", 34);
+      const btn = document.getElementById("btnEjecutar");
+      const salida = document.getElementById("consola-simulada");
+
+      btn.addEventListener("click", function() {
+        const resultado = persona2.saludar();
+        salida.textContent = resultado;
+        console.log(resultado);
+      });
+    </script>
+  </body>
+</html>
