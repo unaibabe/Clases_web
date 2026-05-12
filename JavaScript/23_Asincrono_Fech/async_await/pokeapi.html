@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pokre</title>
+  </head>
+  <body>
+    <script>
+      async function poke() {
+        for (let i = 1; i < 10; i++) {
+          const respuesta = await fetch(
+            `https://pokeapi.co/api/v2/pokemon/${i}`,
+          );
+          const datosJson = await respuesta.json();
+          console.log(datosJson.name);
+        }
+      }
+      poke();
+    </script>
+  </body>
+</html>

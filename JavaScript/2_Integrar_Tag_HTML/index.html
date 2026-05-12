@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integrar Tag - Modern UI</title>
+    <script src="./script.js" defer></script>
+    <!-- Fuente moderna -->
+    <link href="https://googleapis.com" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f172a; /* Azul muy oscuro */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: "Inter", sans-serif;
+      }
+
+      .contenedor {
+        width: 90%;
+        max-width: 500px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.05); /* Efecto cristal */
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow:
+          0 25px 50px -12px rgba(0, 0, 0, 0.5),
+          0 0 15px rgba(87, 199, 133, 0.2);
+      }
+
+      button {
+        margin: 10px;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        border-radius: 12px;
+        color: #0f172a;
+        background: linear-gradient(
+          90deg,
+          #2a7b9b 0%,
+          #57c785 50%,
+          #eddd53 100%
+        );
+        background-size: 200% auto;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      p button {
+        display: block;
+      }
+
+      /* Animación al pasar el mouse */
+      button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(87, 199, 133, 0.4);
+        background-position: right center; /* Mueve el gradiente */
+      }
+
+      /* Efecto al hacer click */
+      button:active {
+        transform: translateY(1px);
+      }
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6); /* Texto suavizado */
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <button onclick="saludar()">Salúdame, bro</button>
+      <button onclick="mostrar_resultado()">Suma</button>
+      <p id="resultado"></p>
+    </div>
+    <!-- <p>El resultado es:</p> -->
+  </body>
+</html>

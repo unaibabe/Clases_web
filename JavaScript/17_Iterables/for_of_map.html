@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        // Permite pareja [clave,valor]. Permite cualquier tipo de elemento como imagenes
+
+        const servicios = new Map([
+            ["Apache",80],
+            ["MySQL",3306]
+        ])
+
+        for(let [servicio, puerto] of servicios){
+            console.log(`el servicio es ${servicio} y el puerto es ${puerto}`);
+            
+        }
+    </script>
+</body>
+</html>

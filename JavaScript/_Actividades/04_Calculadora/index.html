@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        font-size: 25px;
+      }
+      body {
+        background-color: black;
+      }
+      .calculadora {
+        background-color: rgb(2, 26, 41);
+        width: 80%;
+        /* height: 500px; */
+        margin: 10px auto;
+        padding: 10px;
+      }
+      .pantalla {
+        background-color: rgb(0, 0, 0);
+        width: 30%;
+        height: 150px;
+        display: flex;
+        justify-content: end;
+        margin: 0px auto;
+        align-items: end;
+        padding-right: 10px;
+        font-size: 80px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .botones {
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 30%;
+      }
+      .botones button {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: none;
+      }
+      .btn-gris-claro {
+        background-color: grey;
+      }
+      .btn-gris-oscuro {
+        background-color: rgb(39, 39, 39);
+      }
+      .btn-naranja {
+        background-color: orange;
+      }
+      .btn-gris-claro:hover {
+        background-color: rgb(186, 186, 186);
+      }
+      .btn-gris-oscuro:hover {
+        background-color: rgb(94, 94, 94);
+      }
+      .btn-naranja:hover {
+        background-color: rgb(255, 196, 85);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculadora">
+      <div id="pantalla" class="pantalla">0</div>
+      <div class="botones">
+        <!-- Fila 1 -->
+        <button class="btn-gris-claro" onclick="reset()">AC</button>
+        <button class="btn-gris-claro" onclick="valores('-')">+/-</button>
+        <button class="btn-gris-claro">%</button>
+        <button class="btn-naranja" onclick="valores('/')">÷</button>
+        <!-- Fila 2 -->
+        <button class="btn-gris-oscuro" onclick="valores('7')">7</button>
+        <button class="btn-gris-oscuro" onclick="valores('8')">8</button>
+        <button class="btn-gris-oscuro" onclick="valores('9')">9</button>
+        <button class="btn-naranja" onclick="valores('*')">×</button>
+        <!-- Fila 3 -->
+        <button class="btn-gris-oscuro" onclick="valores('5')">4</button>
+        <button class="btn-gris-oscuro" onclick="valores('5')">5</button>
+        <button class="btn-gris-oscuro" onclick="valores('6')">6</button>
+        <button class="btn-naranja" onclick="valores('-')">-</button>
+        <!-- Fila 4 -->
+        <button class="btn-gris-oscuro" onclick="valores('1')">1</button>
+        <button class="btn-gris-oscuro" onclick="valores('2')">2</button>
+        <button class="btn-gris-oscuro" onclick="valores('3')">3</button>
+        <button class="btn-naranja" onclick="valores('+')">+</button>
+        <!-- Fila 5 -->
+        <button class="btn-gris-oscuro">?</button>
+        <button class="btn-gris-oscuro" onclick="valores('0')">0</button>
+        <button class="btn-gris-oscuro" onclick="valores('.')">,</button>
+        <button class="btn-naranja" onclick="calcular()">=</button>
+      </div>
+    </div>
+
+    <script>
+      const pantalla = document.getElementById("pantalla");
+      let estado = 0;
+      pantalla.innerText = "";
+
+      function reset() {
+        pantalla.innerText = "";
+        estado = 0;
+      }
+      function valores(numero) {
+        estado = 1;
+        pantalla.innerText += numero;
+      }
+      function calcular() {
+        if (estado === 1) {
+          let operacion = pantalla.innerText;
+          try {
+            let resutltado = eval(operacion);
+            pantalla.innerText = resutltado;
+            estado = 0;
+          } catch (error) {
+            pantalla.innerText = "operacion no valida";
+            pantalla.style.fontSize = "25px";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
