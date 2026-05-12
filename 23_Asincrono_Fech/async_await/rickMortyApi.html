@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RickMorty</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+      .card {
+        background-color: rgb(0, 81, 255);
+        width: 90%;
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: repeat(5, 2fr);
+      }
+
+      .tarjeta {
+        background-color: rgb(14, 53, 135);
+        margin: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        transition: 80ms ease-in;
+      }
+      .tarjeta:hover {
+        background-color: rgba(35, 14, 112, 0.877);
+        scale: 1.1;
+      }
+      .tarjeta p {
+        margin: 0;
+        font-weight: bold;
+      }
+      .tarjeta img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card" class="card"></div>
+
+    <script>
+      const cardPrincipal = document.getElementById("card");
+      const contenedorPokemons = document.getElementById("contenedor-pokemons");
+
+      async function pokemons() {
+        // 1. Creamos un array de promesas (peticiones)
+        const promesas = [];
+        for (let i = 1; i < 100; i++) {
+          promesas.push(
+            fetch(`https://rickandmortyapi.com/api/character/${i}`).then(
+              (res) => res.json(),
+            ),
+          );
+        }
+
+        // 2. Esperamos a que TODAS se resuelvan al mismo tiempo
+        const todosLosPersonajes = await Promise.all(promesas);
+
+        // 3. Renderizamos todo
+        todosLosPersonajes.forEach((datos) => {
+          const nombre = datos.name;
+          const uperNombre = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+
+          const tarjeta = document.createElement("div");
+          tarjeta.className = "tarjeta";
+
+          // Aquí la imagen ya viene en los datos (datos.image)
+          tarjeta.innerHTML = `
+      <img src="${datos.image}" alt="${uperNombre}">
+      <p>${uperNombre}</p>
+    `;
+
+          cardPrincipal.appendChild(tarjeta);
+        });
+      }
+
+      pokemons();
+    </script>
+  </body>
+</html>
