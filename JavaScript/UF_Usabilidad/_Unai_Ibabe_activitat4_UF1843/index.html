@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 4</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <img src="./img/pau_casals_logo.png" alt="logo pau casals" />
+      <div class="menu">
+        <ul class="lista">
+          <li tabindex="0">Idiomas:</li>
+          <li tabindex="0">Castellano</li>
+          |
+          <li tabindex="0">Inglés</li>
+          <li tabindex="0">Catalán</li>
+          <li tabindex="0" id="contacto">Contacto</li>
+        </ul>
+      </div>
+    </header>
+    <nav>
+      <section>
+        <div class="explicacion">
+          <p tabindex="0">
+            Esta página muestra información clara sobre los precios de Cambridge
+            English Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Placeat, amet similique magni blanditiis sequi officia quia deserunt
+            perspiciatis, quae eum tempore, ratione doloremque aspernatur esse
+            molestiae accusantium sapiente aliquam animi.
+          </p>
+        </div>
+      </section>
+      <section class="tabla">
+        <table>
+          <caption tabindex="0">
+            Equivalencias de los exámenes de Cambridge
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col" tabindex="0">Nivells Ipc</th>
+              <th scope="col" tabindex="0">Exàmens i Certificats</th>
+              <th scope="col" tabindex="0" colspan="2">ESOL</th>
+              <th scope="col" tabindex="0" colspan="1">CEFR</th>
+              <th scope="col" tabindex="0">Horas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">Proficiency</td>
+              <td tabindex="0" colspan="2">A-CPE</td>
+              <td tabindex="0">C2</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">Proficiency</td>
+              <td tabindex="0" colspan="2">A-CAE</td>
+              <td tabindex="0">C1</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">First Certificate</td>
+              <td tabindex="0" colspan="2">A-FCE</td>
+              <td tabindex="0">B2</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">Upper-Intermediate</td>
+              <td tabindex="0" colspan="2">A-PET</td>
+              <td tabindex="0">B1</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">Intermediate</td>
+              <td tabindex="0" colspan="2">A-PET</td>
+              <td tabindex="0">B1</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">Pre-Intermediate</td>
+              <td tabindex="0" colspan="2">A-KET/YLE-Flyers</td>
+              <td tabindex="0">A2</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">Pre-Intermediate</td>
+              <td tabindex="0" colspan="2">A-YLE-Movers</td>
+              <td tabindex="0">A1.2</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+            <tr>
+              <td tabindex="0" scope="row">B</td>
+              <td tabindex="0">Pre-Intermediate</td>
+              <td tabindex="0" colspan="2">A-YLE-Starters</td>
+              <td tabindex="0">A1</td>
+              <td tabindex="0">200 h</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </nav>
+    <section class="formulario">
+      <form action="">
+        <h2 tabindex="0">Formulario de Inscripción</h2>
+        <div class="form-text">
+          <div class="tarjeta-formulario">
+            <label for="nombre" tabindex="0"
+              >Nombre y apellido <strong class="requerido">*</strong>
+            </label>
+            <input
+              id="nombre"
+              name="f-nombre"
+              type="text"
+              required
+              placeholder="Nombre"
+            />
+          </div>
+
+          <div class="tarjeta-formulario">
+            <label for="tel" tabindex="0"
+              >Teléfono <strong class="requerido">*</strong></label
+            >
+            <input
+              type="number"
+              placeholder="Ej.:+34655444333"
+              required
+              name="f-tel"
+              id="tel"
+            />
+          </div>
+
+          <div class="tarjeta-formulario">
+            <label for="mail" tabindex="0"
+              >Correo Electrónico <strong class="requerido">*</strong></label
+            >
+            <input
+              type="email"
+              required
+              name="f-mail"
+              id="mail"
+              placeholder="mail@mail.com"
+            />
+          </div>
+
+          <div class="tarjeta-formulario">
+            <label for="comentario" tabindex="0">Comentario</label>
+            <textarea
+              name="f-text"
+              id="comentario"
+              placeholder="Añade lo que necesites"
+            ></textarea>
+          </div>
+        </div>
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+    <section class="mapa">
+      <!-- Generado en  -->
+      <iframe
+        width="100%"
+        height="400"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        id="gmap_canvas"
+        src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Calle%20Monta%C3%B1a%201-5%20%2008901%20L'Hospitalet%20de%20Llobregat%20+(Hosp%C3%ACtalet)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      ></iframe>
+      <a href="http://maps-website.com/es">Página web</a>
+      <script
+        type="text/javascript"
+        src="https://embedmaps.com/google-maps-authorization/script.js?id=c1fedf4b35573b84fa96849d60f9180cfd3bb55c"
+      ></script>
+    </section>
+  </body>
+  <footer>
+    <p>Viernes 22 de mayo de 2026</p>
+    <p id="nombre-actividad">®Unai_Ibabe_actividad4_UF1843</p>
+    <p id="pau-casals">© Institut Pau Casals. Todos los derechos reservados</p>
+  </footer>
+</html>
