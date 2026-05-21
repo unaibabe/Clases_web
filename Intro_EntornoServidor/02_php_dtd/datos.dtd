@@ -1,0 +1,6 @@
+<!ELEMENT datos (persona+)>
+<!ELEMENT persona (nombre, edad)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+
+<!ATTLIST persona codigo ID #REQUIRED>
