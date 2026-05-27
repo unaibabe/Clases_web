@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(56, 56, 56);
+      }
+      header,
+      footer {
+        position: relative;
+        display: flex;
+        background-color: black;
+        color: white;
+        width: 600px;
+        height: 100px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+      }
+      header {
+        border-radius: 10px 10px 0px 0px;
+      }
+      footer {
+        border-radius: 0 0 10px 10px;
+      }
+      .logo {
+        /* background-color: white; */
+        position: absolute;
+        left: 0px;
+        width: 40%;
+        /* height: 100%; */
+      }
+      .logo img {
+        /* position: absolute; */
+        left: 0px;
+        height: 50px;
+        width: 100%;
+      }
+      .lista {
+        position: absolute;
+        right: 10px;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        /* padding: 10px; */
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 0 5px; */
+        height: 33%;
+        cursor: pointer;
+        width: 80px;
+        height: 40px;
+      }
+      li:hover {
+        background-color: grey;
+        border-radius: 5px;
+      }
+      nav {
+        width: 600px;
+        height: 600px;
+        display: flex;
+        margin: 0 auto;
+        max-height: 600px;
+      }
+      .imagenes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 600px;
+        border: 2px solid black;
+        background-color: white;
+      }
+      .imagenes p {
+        margin-right: 10px;
+        text-align: justify;
+      }
+      img {
+        width: 30%;
+        height: 33%;
+        margin: 0 10px;
+      }
+
+      .codigo {
+        position: absolute;
+        /* background-color: rgb(20, 47, 71); */
+        width: 50%;
+        left: 10px;
+      }
+      .nombre {
+        position: absolute;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img id="logo" src="./img/logo.png" alt="logo"
+        /></a>
+      </div>
+      <div class="lista">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </header>
+    <nav>
+      <div class="imagenes">
+        <img src="./img/icon_html.png" alt="html" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nostrum
+          natus illum enim molestias quis quaerat inventore, modi nemo. Itaque
+          veritatis eveniet quo at, omnis cupiditate id inventore ullam rem.
+          Error provident veritatis aspernatur nesciunt sequi. Dignissimos odio
+          ullam deserunt numquam. Id soluta nihil quasi atque explicabo
+          veritatis? Velit vero neque praesentium odio tempora et, adipisci
+          numquam laboriosam expedita veritatis? Expedita hic omnis id enim ad,
+          voluptates dignissimos nesciunt aperiam. Eum voluptates iure minus,
+          commodi nam itaque blanditiis dolores officiis quasi quam doloremque
+        </p>
+      </div>
+    </nav>
+    <footer>
+      <div class="codigo">
+        <p>MF0491</p>
+      </div>
+      <div class="nombre">
+        <p>Nombre y apellido del Alumno</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+      }
+      .contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        border-radius: 10px;
+        width: 50%;
+        height: 500px;
+        margin: 15% auto;
+      }
+      .contenedor-2 {
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 100px;
+        background-color: red;
+        border-radius: 2px;
+      }
+      .contenedor-2:hover {
+        animation: rotacion 1s linear infinite;
+      }
+
+      @keyframes rotacion {
+        0% {
+          rotate: 0deg;
+        }
+        100% {
+          rotate: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="contenedor-2"></div>
+    </div>
+  </body>
+</html>
