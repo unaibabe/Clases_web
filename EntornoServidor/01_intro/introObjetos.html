@@ -1,0 +1,100 @@
+<html>
+<style>
+body{
+background-color:#654;
+color: #FFF
+}
+
+h1{
+text-align: center;
+}
+
+.caja{
+background-color:#F00;
+width: 80%;
+height: 100px;
+border-radius:8px;
+margin: auto;
+cursor: pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+p{
+display:flex;
+width: 100%;
+height: 50px;
+background-color:#000;
+border-radius:8px;
+align-items:center;
+justify-content:center;
+text-align: center;
+padding:10px;
+}
+</style>
+
+
+<body>
+<h1>Hola  Mundo</h1>
+<div id="boton" class= "caja">Click</div>
+<p id="mensaje"></p>
+<p id="mensaje-2"></p>
+</body>
+<script>
+
+const boton = document.getElementById("boton");
+const texto = document.getElementById("mensaje");
+const texto2 = document.getElementById("mensaje-2");
+let contador = 0;
+
+let datos = [];
+datos[1] = 1;
+datos[2] = 2;
+datos[3] = 3;
+datos["xx"] = "juan";
+//document.write(datos[1]);
+
+
+let restar = (a,b) =>{ return a-b};
+
+let tabla = [];
+tabla[1] =[];
+tabla[1][1]=10;
+tabla[1][2]=20;
+tabla["xx"] = [];
+tabla["xx"][1] = "Juan";
+
+//tabla.forEach(valor=>valor.forEach(dato=>{console.log(dato+",")}))
+
+for (let fila = 0;fila<=10;fila++){
+	tabla[fila] = [];
+	for(let columna = 0; columna <=10; columna++){
+		tabla[fila][columna]= fila*columna;
+	}
+}
+// console.log(tabla);
+tabla.forEach((fila,indice_fila)=>{
+	document.write("TABLA DE MULTIPLICAR DEL:" +indice_fila + "<br>");
+	fila.forEach((columna, indice_col)=>{
+		document.write(indice_fila + "X" + indice_col + " = " + 
+		tabla[indice_fila][indice_col]+"<br>");
+		
+	})
+})
+
+boton.addEventListener("click",()=>{
+texto2.innerHTML = "";
+texto.innerText = contador;
+console.log("Has clicado");
+contador ++;
+//console.log(restar(3,5));
+//datos.forEach(valor =>{document.write(valor + "<br>")})
+datos.forEach(valor =>{texto2.innerHTML += (valor +"<br>");
+			
+})
+
+
+
+})
+</script>
+</html>
