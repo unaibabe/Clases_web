@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simpsons</title>
+  </head>
+  <body>
+    <h1>Personajes Simpsons</h1>
+    <ul id="lista"></ul>
+
+    <script>
+      async function simpsons() {
+        const lista = document.getElementById("lista");
+        for (i = 1; i < 10; i++) {
+          const respuesta = await fetch(
+            `https://thesimpsonsapi.com/api/characters/${i}`,
+          );
+          const datos = await respuesta.json();
+          const nombre = datos.id;
+          console.log(datos.name);
+          const li = document.createElement("li");
+          li.innerText = datos.name;
+          lista.appendChild(li);
+        }
+      }
+      simpsons();
+    </script>
+  </body>
+</html>

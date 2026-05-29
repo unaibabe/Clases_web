@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagenes Target</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .contenedor {
+        display: flex;
+        background-color: black;
+        width: 510px;
+        height: 320px;
+        position: relative;
+      }
+      #img-principal-1:target {
+        opacity: 1;
+      }
+      #img-principal-2:target {
+        opacity: 1;
+      }
+      #img-principal-3:target {
+        opacity: 1;
+      }
+
+      #img-principal-1 {
+        position: absolute;
+        opacity: 0;
+        width: 400px;
+        height: 320px;
+        background-color: blue;
+        margin-right: 10px;
+      }
+      #img-principal-2 {
+        position: absolute;
+        width: 400px;
+        height: 320px;
+        background-color: red;
+        margin-right: 10px;
+        opacity: 0;
+      }
+      #img-principal-3 {
+        position: absolute;
+        width: 400px;
+        height: 320px;
+        background-color: green;
+        margin-right: 10px;
+        opacity: 0;
+      }
+      .contenedor-pri {
+        width: 410px; /* 400px de la imagen + 10px de margen derecho */
+        height: 320px;
+      }
+
+      .contenedor-sec {
+        width: 100px;
+        height: 320px;
+        background-color: bisque;
+      }
+      .imagenes-secundarias-1 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin-bottom: 10px;
+      }
+      .imagenes-secundarias-2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin-bottom: 10px;
+      }
+      .imagenes-secundarias-3 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor" id="galeria">
+      <div class="contenedor-pri">
+        <div id="img-principal-1"></div>
+        <div id="img-principal-2"></div>
+        <div id="img-principal-3"></div>
+      </div>
+      <div class="contenedor-sec">
+        <a href="#img-principal-1"
+          ><div class="imagenes-secundarias-1"></div
+        ></a>
+        <a href="#img-principal-2"
+          ><div class="imagenes-secundarias-2"></div
+        ></a>
+        <a href="#img-principal-3"
+          ><div class="imagenes-secundarias-3"></div
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Tres maneras diferentes de escriubir la misma funcion</h3>
+    <p>
+      Metodo uno, funcion con argumentos: <br />
+      function sumar(a, b) <br />
+      { return a + b; } <br />
+      let resultados = sumar(4, 10);
+    </p>
+
+    <script>
+      function sumar(a, b) {
+        return a + b;
+      }
+      let resultados = sumar(4, 10);
+      document.write(`El resultado de la suma es: ${resultados}`);
+    </script>
+
+    <p>Metodo dos funcion flecha: <br>
+    const sumar = (a, b) => { <br>
+        return a + b; 
+      }; <br>
+      let resultado = sumar(10,5) <br>
+    </p>
+    <script>
+      const sumar = (a, b) => {
+        return a + b;
+      };
+      let resultado = sumar(10,5)
+      document.write(`El resultado de la suma FLECHA es: ${resultado}`);
+    </script>
+
+    <p>Tercer metodo funcion flecha abrebiada: <br>
+        const sumar = (a,b) => a+b;<br>
+        let resultado = sumar(10,5)
+    </p>
+    <script>
+        const suma = (a,b) =>{a+b}
+        let result = suma(a+b)
+        document.write(result)
+    </script>
+  </body>
+</html>

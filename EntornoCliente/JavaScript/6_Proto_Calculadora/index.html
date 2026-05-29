@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IF - si condicional</title>
+    <style>
+      body {
+        background-color: rgb(0, 4, 40);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .contenedor {
+        flex-direction: column;
+        padding: 50px;
+        display: flex;
+        width: 400px;
+        min-height: 200px;
+        border: 2px solid;
+        border-color: conic-gradient(#00ccff, #d400d4, #00ccff);
+        background-color: rgb(6, 64, 114);
+        border-radius: 10px 30px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 10px rgb(100, 136, 255);
+        transition: 150ms ease-in-out;
+      }
+      
+
+      input {
+        background-color: rgb(41, 41, 41);
+        border: none;
+        border-radius: 10px;
+        width: 90%;
+        height: 25px;
+        padding: 5px;
+        margin: 15px;
+        color: white;
+        padding-left: 20px ;
+      }
+      button {
+        width: 80%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border-style: none;
+        margin: auto;
+        background: linear-gradient(
+          90deg,
+          #2a7b9b 0%,
+          #57c785 50%,
+          #eddd53 100%
+        );
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        transform: translateY(-2px);
+        background-position: right center;
+        box-shadow: 0 8px 20px rgba(87, 199, 133, 0.3);
+      }
+      .resultados {
+        visibility: hidden;
+        margin-top: 10px;
+        display: flex;
+        background-color: #2a7b9b;
+        box-shadow: 0 8px 20px rgba(87, 199, 133, 0.3);
+        border-radius: 10px;
+        width: 80%;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .resultados p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="contenedor-texto">
+        <h3>Proto Calculadora</h3>
+        <label for="numero-1">Valor 1:</label>
+        <input type="text" id="numero-1" placeholder="Numero" />
+        <label for="numero-2">Valor 2:</label>
+        <input type="text" id="numero-2" placeholder="Numero 2" />
+        <button onclick="calcular()" id="btn-calcular">Calcular</button>
+      </div>
+      <div class="resultados">
+        <p id="mensaje"></p>
+      </div>
+    </div>
+
+    <script>
+      function calcular() {
+        console.log("Empieza el calculo");
+        document.querySelector(".resultados").style.visibility = "visible"
+
+        let valor_1 = parseFloat(document.getElementById("numero-1").value);
+        let valor_2 = parseFloat(document.getElementById("numero-2").value);
+
+        let resultado_suma = suma(valor_1, valor_2).toFixed(2);
+        let resultado_resta = resta(valor_1, valor_2).toFixed(2);
+        let resultado_division = division(valor_1, valor_2).toFixed(2);
+        let resultado_potencia = potencia(valor_1, valor_2).toFixed(2);
+        let resultado_resto = resto(valor_1, valor_2).toFixed(2);
+
+        console.log(resultado_suma);
+        document.getElementById("mensaje").innerHTML =
+          "Suma: " +
+          resultado_suma +
+          "<br>" +
+          "Resta: " +
+          resultado_resta +
+          "<br>" +
+          "Division: " +
+          resultado_division +
+          "<br>" +
+          "Potencia: " +
+          resultado_potencia +
+          "<br>" +
+          "Resto: " +
+          resultado_resto;
+
+        
+      }
+      function suma(a, b) {
+        return a + b;
+      }
+      function resta(a, b) {
+        return a - b;
+      }
+      function division(a, b) {
+        return a / b;
+      }
+      function producto(a, b) {
+        return a * b;
+      }
+      function potencia(a, b) {
+        return a ** b;
+      }
+      function resto(a, b) {
+        return a % b;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-height: 100vh;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  /* font-weight: bold; */
+}
+/*#############################################*/
+/*############# MENU SUPERIOR #################*/
+/*#############################################*/
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background: #eeaeca;
+  background: linear-gradient(
+    270deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  padding: 0 20px;
+  box-shadow: 0px 5px 8px rgb(143, 143, 143);
+}
+.menu {
+  position: absolute;
+  right: 1%;
+}
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin: 0 1px;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+}
+li:hover {
+  background-color: rgb(65, 41, 91);
+  color: white;
+}
+#contacto {
+  display: flex;
+  background-color: rgb(65, 41, 91);
+  color: white;
+  font-weight: lighter;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+}
+#contacto:hover {
+  background-color: rgb(101, 62, 142);
+}
+img {
+  cursor: pointer;
+  height: 30px;
+}
+/* EXPLICACION */
+.explicacion {
+  background-color: rgba(212, 212, 212, 0.66);
+  display: flex;
+  height: 60px;
+  padding: 50px 30px;
+  align-items: center;
+  /* box-shadow: 1px 5px 8px rgb(197, 64, 64); */
+}
+
+/*#############################################*/
+/*##################### TABLA #################*/
+/*#############################################*/
+
+.tabla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(237, 237, 237);
+  padding: 25px 0;
+}
+caption {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: solid black 2px;
+}
+table,
+th,
+td {
+  border: solid 1.7px black;
+  padding: 4px 10px;
+  border-collapse: collapse;
+  text-align: center;
+}
+table {
+  box-shadow: 1px 5px 15px grey;
+  width: 90%;
+}
+th {
+  background-color: rgba(177, 168, 193);
+  font-weight: bold;
+  border: transparent;
+  border-bottom: rgb(31, 31, 31) 1px solid;
+}
+td {
+  border: transparent;
+  border-bottom: rgb(31, 31, 31) 1px solid;
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #dad6e1;
+}
+tr:nth-child(odd):hover {
+  background-color: rgba(113, 98, 139, 0.7);
+}
+tr:nth-child(even):hover {
+  background-color: #938aa196;
+}
+
+/*#############################################*/
+/*############### FORMULARIO ##################*/
+/*#############################################*/
+
+.formulario {
+  display: flex;
+  background-color: rgba(177, 168, 193);
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 80%;
+  margin: 10px auto;
+  box-shadow: 1px 10px 10px gray;
+}
+.form-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.tarjeta-formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+form h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px black;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+label {
+  font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+  height: 40px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+  padding: 0 10px;
+  border: 1px grey solid;
+  font-weight: bold;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+input[type="submit"] {
+  margin: auto;
+  background-color: #6b3f64;
+  height: 40px;
+  width: 80%;
+  border-radius: 10px;
+  border-color: transparent;
+  font-size: larger;
+  font-weight: bold;
+  box-shadow: 1px 2px 8px grey;
+  color: white;
+  transition: 150ms ease;
+}
+input[type="submit"]:hover {
+  background-color: rgb(65, 48, 55);
+  color: white;
+  scale: 1.02;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgb(114, 73, 159);
+  box-shadow: 0 0 5px 3px rgba(88, 30, 150, 0.596);
+}
+textarea {
+  height: 80px;
+  width: 100%;
+}
+.requerido {
+  color: red;
+}
+
+/*#############################################*/
+/*################## MAPA #####################*/
+/*#############################################*/
+
+.mapa {
+  background-color: #ececec;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+iframe {
+  border-radius: 10px;
+  width: 90%;
+  margin: 50px auto;
+}
+
+/*#############################################*/
+/*################ FOOTER #####################*/
+/*#############################################*/
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background: #eeaeca;
+  background: linear-gradient(
+    270deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  padding: 0 20px;
+  box-shadow: 0px 5px 8px rgb(143, 143, 143);
+}
+#nombre-actividad {
+  position: absolute;
+  right: 40%;
+  /* font-weight: bold; */
+}
+#pau-casals {
+  position: absolute;
+  right: 1%;
+}

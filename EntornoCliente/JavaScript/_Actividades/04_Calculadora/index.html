@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculadora">
+      <div id="pantalla" class="pantalla">0</div>
+      <div class="botones">
+        <!-- Fila 1 -->
+        <button class="btn-gris-claro" onclick="reset()">AC</button>
+        <button class="btn-gris-claro" onclick="cambio()">+/-</button>
+        <button class="btn-gris-claro" onclick="porcentaje()">%</button>
+        <button class="btn-naranja" onclick="valores('/')">÷</button>
+        <!-- Fila 2 -->
+        <button class="btn-gris-oscuro" onclick="valores('7')">7</button>
+        <button class="btn-gris-oscuro" onclick="valores('8')">8</button>
+        <button class="btn-gris-oscuro" onclick="valores('9')">9</button>
+        <button class="btn-naranja" onclick="valores('*')">×</button>
+        <!-- Fila 3 -->
+        <button class="btn-gris-oscuro" onclick="valores('5')">4</button>
+        <button class="btn-gris-oscuro" onclick="valores('5')">5</button>
+        <button class="btn-gris-oscuro" onclick="valores('6')">6</button>
+        <button class="btn-naranja" onclick="valores('-')">-</button>
+        <!-- Fila 4 -->
+        <button class="btn-gris-oscuro" onclick="valores('1')">1</button>
+        <button class="btn-gris-oscuro" onclick="valores('2')">2</button>
+        <button class="btn-gris-oscuro" onclick="valores('3')">3</button>
+        <button class="btn-naranja" onclick="valores('+')">+</button>
+        <!-- Fila 5 -->
+        <button class="btn-gris-oscuro" onclick="borrarUltimo()">⌫</button>
+        <button class="btn-gris-oscuro" onclick="valores('0')">0</button>
+        <button class="btn-gris-oscuro" onclick="valores('.')">,</button>
+        <button class="btn-naranja" onclick="calcular()">=</button>
+      </div>
+    </div>
+
+    <script src="./scrip.js"></script>
+  </body>
+</html>

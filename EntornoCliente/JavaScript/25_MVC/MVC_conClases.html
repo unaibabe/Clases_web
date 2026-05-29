@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Lista de Socios</title>
+</head>
+<body>
+<script>
+    // Clase Modelo: gestiona los datos
+    class ModeloSocios {
+        constructor() {
+            this.sociosArray = ["Eva", "Toni", "Antonio", "Cristina"];
+        }
+        // Método para obtener la lista de socios
+        obtenerSocios() {
+            return this.sociosArray;
+        }
+    }
+
+
+    // Clase Vista: se encarga de mostrar la información
+    class VistaHTML {
+        mostrarSocios(listaDeSocios) {
+            listaDeSocios.forEach(socio => {
+            document.write("<p>" + socio + "</p>");
+        });
+        }
+    }
+
+    // Clase Controlador: conecta el modelo con la vista
+    class ControladorSocios {
+        constructor(modelo, vista) {
+            this.modeloControlador = modelo;
+            this.vistaControlador = vista;
+        }
+        ejecutar() {
+            const lista = this.modeloControlador.obtenerSocios();
+            this.vistaControlador.mostrarSocios(lista);
+        }
+    }
+    
+    // Crear instancias del modelo, la vista y el controlador
+    const modeloInstancia = new ModeloSocios();
+    const vistaInstancia = new VistaHTML();
+    const controladorInstancia = new ControladorSocios(modeloInstancia, vistaInstancia);
+    
+    
+    // Ejecutar la aplicación
+    controladorInstancia.ejecutar();
+</script>
+</body>
+</html>

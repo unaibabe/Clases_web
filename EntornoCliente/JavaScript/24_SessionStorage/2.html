@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segundo Fichero: Lectura y Borrado</title>
+    <style>
+      :root {
+        --bg-color: #f4f7f6;
+        --card-bg: #ffffff;
+        --text-color: #333333;
+        --primary-color: #0076d6;
+        --danger-color: #d90429;
+        --border-radius: 8px;
+        --code-bg: #1e1e1e;
+      }
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .card {
+        background: var(--card-bg);
+        padding: 25px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+      }
+      h1 {
+        color: var(--primary-color);
+        margin-top: 0;
+      }
+      h2 {
+        border-bottom: 2px solid var(--bg-color);
+        padding-bottom: 8px;
+      }
+      .highlight {
+        background-color: #eef1f6;
+        padding: 15px;
+        border-left: 4px solid var(--primary-color);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        font-weight: bold;
+      }
+      .alert-box {
+        background-color: #fdf2f2;
+        padding: 15px;
+        border-left: 4px solid var(--danger-color);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        margin-top: 15px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      .btn {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        font-weight: bold;
+        transition: background 0.2s;
+      }
+      .btn:hover {
+        background-color: #00569d;
+      }
+      code {
+        background: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      .code-block {
+        background-color: var(--code-bg);
+        color: #f8f8f2;
+        padding: 15px;
+        border-radius: var(--border-radius);
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        overflow-x: auto;
+        white-space: pre;
+        margin: 15px 0;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .code-comment {
+        color: #75715e;
+        font-style: italic;
+      }
+      .code-keyword {
+        color: #f92672;
+      }
+      .code-string {
+        color: #e6db74;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sección Interactiva -->
+    <div class="card">
+      <h1>Segundo Fichero</h1>
+      <p class="highlight" id="mensaje">Recuperando información...</p>
+
+      <div class="alert-box">
+        <strong>Estado del almacenamiento:</strong> ¡Los datos han sido
+        eliminados del navegador inmediatamente después de leerlos en este
+        fichero!
+      </div>
+
+      <div style="margin-top: 20px">
+        <a href="3.html" class="btn">Ir al tercer fichero →</a>
+      </div>
+    </div>
+
+    <!-- Sección Explicativa -->
+    <div class="card">
+      <h2>¿Qué acaba de pasar con los datos?</h2>
+      <p>
+        Este fichero demuestra cómo recuperar la información guardada por el
+        archivo anterior y cómo realizar tareas de limpieza en el navegador:
+      </p>
+
+      <h3>Código ejecutado para Local Storage:</h3>
+      <div class="code-block">
+        <span class="code-keyword">let</span> nombreRecuperado =
+        localStorage.getItem(<span class="code-string">"Nombre"</span>);
+
+        <span class="code-keyword">if</span> (nombreRecuperado) {
+        document.getElementById(<span class="code-string">"mensaje"</span
+        >).innerHTML = <span class="code-string">"Hola de nuevo, "</span> +
+        nombreRecuperado; } <span class="code-keyword">else</span> {
+        document.getElementById(<span class="code-string">"mensaje"</span
+        >).innerHTML =
+        <span class="code-string">"No se encontraron datos."</span>; }
+        localStorage.removeItem(<span class="code-string">"Nombre"</span>);
+        localStorage.clear();
+      </div>
+
+      <ul>
+        <li>
+          <strong>Lectura (<code>getItem</code>):</strong> El navegador busca la
+          clave <code>"Nombre"</code>. Si venías del primer fichero, mostrará el
+          nombre que escribiste porque los datos persisten entre páginas.
+        </li>
+        <li>
+          <strong>Eliminación selectiva (<code>removeItem</code>):</strong>
+          Borra exclusivamente la clave especificada de la memoria del
+          navegador. Las demás claves intactas permanecen.
+        </li>
+        <li>
+          <strong>Limpieza total (<code>clear</code>):</strong> Vacía por
+          completo todo el almacenamiento correspondiente a este sitio web
+          (borra todas las claves existentes).
+        </li>
+      </ul>
+
+      <h3>Diferencia en el ciclo de vida (Código para Session Storage):</h3>
+      <div class="code-block">
+        <span class="code-keyword">let</span> nombreRecuperado =
+        sessionStorage.getItem(<span class="code-string">"Nombre"</span>);
+
+        <span class="code-keyword">if</span> (nombreRecuperado) {
+        document.getElementById(<span class="code-string">"mensaje"</span
+        >).innerHTML = <span class="code-string">"Hola de nuevo, "</span> +
+        nombreRecuperado; } <span class="code-keyword">else</span> {
+        document.getElementById(<span class="code-string">"mensaje"</span
+        >).innerHTML =
+        <span class="code-string">"No se encontraron datos."</span>; }
+        sessionStorage.removeItem(<span class="code-string">"Nombre"</span>);
+        sessionStorage.clear();
+      </div>
+
+      <p>
+        Si usaras el código de arriba con <code>sessionStorage</code>, el nombre
+        solo se leería con éxito si navegaste haciendo clic en el enlace. Si
+        hubieras copiado la URL y abierto este segundo fichero en una pestaña
+        nueva separada, el resultado habría sido <code>null</code> (vacío).
+      </p>
+    </div>
+
+    <script>
+      let nombreRecuperado = localStorage.getItem("Nombre");
+
+      if (nombreRecuperado) {
+        document.getElementById("mensaje").innerHTML =
+          "Hola de nuevo, " +
+          nombreRecuperado +
+          ". Hemos leído tu nombre desde LocalStorage.";
+      } else {
+        document.getElementById("mensaje").innerHTML =
+          "No se encontraron datos en LocalStorage (o ya fueron borrados).";
+      }
+
+      localStorage.removeItem("Nombre");
+      localStorage.clear();
+    </script>
+  </body>
+</html>

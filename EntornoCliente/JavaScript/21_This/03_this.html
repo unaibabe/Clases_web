@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this en Event Listeners</title>
+    <style>
+      :root {
+        --bg-color: #f4f7f6;
+        --code-bg: #2d2d2d;
+        --accent: #9b59b6; /* Púrpura para eventos */
+        --text-color: #333;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      h3 {
+        border-left: 5px solid var(--accent);
+        padding-left: 15px;
+        margin-top: 30px;
+        color: #555;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        color: #f8f8f2;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: "Consolas", monospace;
+        font-size: 0.95rem;
+      }
+
+      .explicacion {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 12px 24px;
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      #mensaje {
+        margin-top: 15px;
+        padding: 10px;
+        color: #666;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>💡 "this" en Event Listeners</h3>
+    <div class="explicacion">
+      Cuando usamos una función normal como manejador de eventos, <code>this</code> hace referencia al 
+      <strong>elemento HTML</strong> que disparó el evento. Es muy útil para modificar el estilo o el texto del elemento que el usuario acaba de tocar sin tener que buscarlo de nuevo con su ID.
+    </div>
+
+    <h3>💻 Código del Ejemplo</h3>
+    <pre>
+const btn = document.getElementById("btnCrear");
+
+btn.addEventListener("click", function() {
+// Usamos 'this' para acceder a las propiedades del botón
+this.style.backgroundColor = "#2ecc71"; // Cambia a verde
+this.style.transform = "scale(1.1)";
+this.textContent = "¡Soy 'this'!";
+
+document.getElementById("mensaje").innerHTML = 
+    "El botón ha cambiado su propio estilo usando <code>this</code>";
+});
+;</pre>
+
+    <h3>🚀 Demo en vivo</h3>
+    <button id="btnCrear">Haz clic para transformarme</button>
+    <div id="mensaje">Al pulsar, el botón usará 'this' para modificarse a sí mismo.</div>
+
+    <script>
+      const btn = document.getElementById("btnCrear");
+      
+      btn.addEventListener("click", function() {
+        // Usamos 'this' para acceder a las propiedades del botón
+        this.style.backgroundColor = "#2ecc71"; // Cambia a verde
+        this.style.transform = "scale(1.1)";
+        this.textContent = "¡Soy 'this'!";
+        
+        document.getElementById("mensaje").innerHTML = 
+          "El botón ha cambiado su propio estilo usando <code>this</code>";
+      });
+    </script>
+  </body>
+</html>

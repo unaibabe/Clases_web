@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        max-height: 100vh;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        font-size: 16px;
+        /* font-weight: bold; */
+      }
+      /* MENU SUPERIOR */
+      header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 70px;
+        background: #eeaeca;
+        background: linear-gradient(
+          270deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+        padding: 0 20px;
+        box-shadow: 0px 5px 8px rgb(143, 143, 143);
+      }
+      .menu {
+        position: absolute;
+        right: 1%;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+      }
+      li {
+        margin: 0 5px;
+
+        cursor: pointer;
+      }
+      li:hover {
+        background-color: aqua;
+      }
+      #contacto {
+        display: flex;
+        background-color: rgb(114, 73, 159);
+        color: white;
+        font-weight: lighter;
+        border-radius: 20px;
+        width: 100px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 1px;
+      }
+      #contacto:hover {
+        background-color: rgb(101, 62, 142);
+      }
+      img {
+        cursor: pointer;
+        height: 30px;
+      }
+      /* EXPLICACION */
+      .explicacion {
+        background-color: rgba(212, 212, 212, 0.66);
+        display: flex;
+        height: 60px;
+        padding: 50px 30px;
+        align-items: center;
+        /* box-shadow: 1px 5px 8px rgb(197, 64, 64); */
+      }
+      /* TABLA */
+      .tabla {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(237, 237, 237);
+        padding: 25px 0;
+      }
+      caption {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        border-bottom: solid black 2px;
+      }
+      table,
+      th,
+      td {
+        border: solid 1.7px black;
+        padding: 4px 10px;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      table {
+        box-shadow: 1px 5px 15px grey;
+        width: 90%;
+      }
+      th {
+        background-color: rgba(177, 168, 193);
+        font-weight: bold;
+        border: transparent;
+        border-bottom: rgb(31, 31, 31) 1px solid;
+      }
+      td {
+        border: transparent;
+        border-bottom: rgb(31, 31, 31) 1px solid;
+      }
+      tr:nth-child(even) {
+        background-color: #dad6e1;
+      }
+
+      /* FORMULARIO */
+      .formulario {
+        display: flex;
+        background-color: rgb(193, 193, 193);
+        border-radius: 10px;
+        padding: 10px 0;
+        width: 60%;
+        margin: 10px auto;
+        box-shadow: 1px 10px 10px gray;
+      }
+      .formulario form {
+        display: flex;
+        /* flex-direction: column; */
+        /* align-items: center;
+        justify-content: center; */
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+      }
+      form h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: solid 2px black;
+        margin-bottom: 50px;
+        padding-bottom: 10px;
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      textarea {
+        height: 40px;
+        width: 40%;
+        margin: 10px 0;
+        border-radius: 8px;
+        padding: 0 10px;
+        border: 1px grey solid;
+        font-weight: bold;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+      input[type="submit"] {
+        background-color: #eeaee3;
+        height: 40px;
+        /* width: 80%; */
+        border-radius: 10px;
+        border-color: transparent;
+        font-size: larger;
+        font-weight: bold;
+      }
+      input[type="submit"]:hover {
+        background-color: #eeaeca;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: rgb(114, 73, 159);
+        box-shadow: 0 0 0 3px rgb(114, 73, 159, 0.5);
+      }
+      textarea {
+        height: 80px;
+        width: 100%;
+      }
+      .requerido {
+        color: red;
+      }
+      /* MAPA */
+      .mapa {
+        background-color: #ececec;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: 40px;
+      }
+      iframe {
+        border-radius: 10px;
+        width: 90%;
+        margin: 50px auto;
+      }
+
+      /* FOTER */
+      footer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 70px;
+        background: #eeaeca;
+        background: linear-gradient(
+          270deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+        padding: 0 20px;
+        box-shadow: 0px 5px 8px rgb(143, 143, 143);
+      }
+      #nombre-actividad {
+        position: absolute;
+        right: 1%;
+        /* font-weight: bold; */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./img/pau_casals_logo.png" alt="logo pau casals" />
+      <div class="menu">
+        <ul class="lista">
+          <li>Idiomas:</li>
+          <li>Castellano</li>
+          |
+          <li>Ingles</li>
+          <li>Catalan</li>
+          <li id="contacto">Contacto</li>
+        </ul>
+      </div>
+    </header>
+    <nav>
+      <section>
+        <div class="explicacion">
+          <p>
+            Esta pagina muestra informacion clara sobre los precios de Cambridge
+            English Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Placeat, amet similique magni blanditiis sequi officia quia deserunt
+            perspiciatis, quae eum tempore, ratione doloremque aspernatur esse
+            molestiae accusantium sapiente aliquam animi.
+          </p>
+        </div>
+      </section>
+      <section class="tabla">
+        <table>
+          <caption>
+            Equivalencias de los exámenes de Cambridge
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Nivells Ipc</th>
+              <th scope="col">Exàmens i Certificats</th>
+              <th scope="col" colspan="2">ESOL</th>
+              <th scope="col" colspan="1">CEFR</th>
+              <th scope="col">Horas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">B</td>
+              <td>Proficiency</td>
+              <td colspan="2">A-CPE</td>
+              <td>C2</td>
+              <td>200 h</td>
+            </tr>
+            <tr>
+              <td scope="row">B</td>
+              <td>Proficiency</td>
+              <td colspan="2">A-CAE</td>
+              <td>C1</td>
+              <td>200 h</td>
+            </tr>
+            <tr>
+              <td scope="row">B</td>
+              <td>First Certificate</td>
+              <td colspan="2">A-FCE</td>
+              <td>B2</td>
+              <td>200 h</td>
+            </tr>
+            <tr>
+              <td scope="row">B</td>
+              <td>Upper-Intermediate</td>
+              <td colspan="2">A-PET</td>
+              <td>B1</td>
+              <td>200 h</td>
+            </tr>
+            <tr>
+              <td scope="row">B</td>
+              <td>Intermediate</td>
+              <td colspan="2">A-PET</td>
+              <td>B1</td>
+              <td>200 h</td>
+            </tr>
+            <tr>
+              <td scope="row">B</td>
+              <td>Pre-Intermediate</td>
+              <td colspan="2">A-KET/YLE-Flyers</td>
+              <td>A2</td>
+              <td>200 h</td>
+            </tr>
+            <tr>
+              <td scope="row">B</td>
+              <td>Pre-Intermediate</td>
+              <td colspan="2">A-YLE-Movers</td>
+              <td>A1.2</td>
+              <td>200 h</td>
+            </tr>
+            <tr>
+              <td scope="row">B</td>
+              <td>Pre-Intermediate</td>
+              <td colspan="2">A-YLE-Starters</td>
+              <td>A1</td>
+              <td>200 h</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </nav>
+    <section class="formulario">
+      <form action="">
+        <h2>Formulario de Contacto</h2>
+        <label for="nombre"
+          >Nombre y apellido <strong class="requerido">*</strong>
+        </label>
+        <input
+          id="nombre"
+          name="f-nombre"
+          type="text"
+          required
+          placeholder="Nombre"
+        />
+
+        <label for="tel">Telefono <strong class="requerido">*</strong></label>
+        <input
+          type="number"
+          placeholder="Ej.:+34655444333"
+          required
+          name="f-tel"
+          id="tel"
+        />
+
+        <label for="mail"
+          >Correo Electronico <strong class="requerido">*</strong></label
+        >
+        <input
+          type="email"
+          required
+          name="f-mail"
+          id="mail"
+          placeholder="mail@mail.com"
+        />
+
+        <label for="comentario">Comentario</label>
+        <textarea
+          name="f-text"
+          id="comentario"
+          placeholder="Añade lo que necesites"
+        ></textarea>
+
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+    <section class="mapa">
+      <!-- Generado en  -->
+      <iframe
+        width="100%"
+        height="400"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        id="gmap_canvas"
+        src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Calle%20Monta%C3%B1a%201-5%20%2008901%20L'Hospitalet%20de%20Llobregat%20+(Hosp%C3%ACtalet)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      ></iframe>
+      <a href="http://maps-website.com/es">Página web</a>
+      <script
+        type="text/javascript"
+        src="https://embedmaps.com/google-maps-authorization/script.js?id=c1fedf4b35573b84fa96849d60f9180cfd3bb55c"
+      ></script>
+    </section>
+  </body>
+  <footer>
+    <p>Viernes 22 de mayo de 2026</p>
+    <p id="nombre-actividad">Unai_Ibabe_actividad4_UF1843</p>
+  </footer>
+</html>
