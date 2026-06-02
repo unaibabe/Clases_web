@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"<Unnamed>","l":"Grado"},{"p":"<Unnamed>","l":"iEstudios","k":"10"},{"p":"<Unnamed>","l":"Master"},{"p":"<Unnamed>","l":"Programa"},{"p":"<Unnamed>","l":"Universidad"}];updateSearchResults();

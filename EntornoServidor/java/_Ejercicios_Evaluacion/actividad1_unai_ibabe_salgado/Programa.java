@@ -81,4 +81,8 @@ public abstract class Programa implements iEstudios
     public void setDireccion(String pDireccion) {
         this.direccion=pDireccion;
     }
+    /*public abstract String getTipoPrograma(){
+        return this.tipoPrograma; Deberia ser algo asi para segui la indicacion de uml pero no me sale
+        porque no tenemos tipoPrograma.
+    }*/
 }
