@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Nif
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Nif\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Nif()
+comment2.params=pNif
+comment2.target=Nif(java.lang.String)
+comment3.params=pNif
+comment3.target=void\ setNif(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getNif()
+comment5.params=
+comment5.target=char\ getLetra()
+numComments=6
