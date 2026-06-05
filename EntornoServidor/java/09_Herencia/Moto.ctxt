@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Moto
+comment1.params=ruedas\ p
+comment1.target=Moto(int,\ int)
+comment2.params=
+comment2.target=Moto()
+comment3.params=
+comment3.target=int\ getPotencia()
+comment4.params=potencia
+comment4.target=void\ setPotencia(int)
+numComments=5

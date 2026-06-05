@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Coche
+comment1.params=p
+comment1.target=Coche(int)
+comment2.params=r\ p
+comment2.target=Coche(int,\ int)
+numComments=3
