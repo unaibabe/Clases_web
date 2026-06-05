@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Persona
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Persona\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nombreCompleto\ sexo\ fechaNacimiento\ telefono\ correoElectronico
+comment1.target=Persona(java.lang.String,\ char,\ java.time.LocalDate,\ int,\ java.lang.String)
+comment10.params=
+comment10.target=java.lang.String\ getCorreoElectronico()
+comment11.params=pCorreoElectronico
+comment11.target=void\ setCorreoElectronico(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNombreCompleto()
+comment3.params=pNombre
+comment3.target=void\ setNombreCompleto(java.lang.String)
+comment4.params=
+comment4.target=char\ getSexo()
+comment5.params=pSexo
+comment5.target=void\ setSexo(char)
+comment6.params=
+comment6.target=java.time.LocalDate\ getFechaNacimiento()
+comment7.params=pFecha
+comment7.target=void\ setFechaNacimiento(java.lang.String)
+comment8.params=
+comment8.target=int\ getTelefono()
+comment9.params=pTelefono
+comment9.target=void\ setTelefono(int)
+numComments=12
