@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Archivo
+comment0.text=\r\n\ La\ classe\ Archivo\ instancia\ un\ sistema\ de\ gesti\u00F3n\ documental\r\n\ \r\n\ @author\ Juan\ Pedro\ Cerro\ Mart\u00EDnez\ \r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=Archivo()
+comment1.text=\r\n\ Constructor\ por\ defecto\r\n
+comment2.params=pNombre
+comment2.target=Archivo(java.lang.String)
+comment2.text=\r\n\ M\u00E9todo\ constructor\ espec\u00EDfico\ de\ la\ clase\r\n\ \r\n\ @param\ pNombre\ Nombre\ del\ archivo\r\n
+comment3.params=
+comment3.target=java.lang.String\ getNombre()
+comment3.text=\r\n\ M\u00E9todo\ accesor\ de\ la\ propiedad\ "nombre"\r\n\ \r\n\ @param\ \r\n\ @return\ El\ nombre\ con\ el\ contenido\ de\ la\ propiedad\r\n
+comment4.params=pNombre
+comment4.target=void\ setNombre(java.lang.String)
+comment4.text=\r\n\ M\u00E9todo\ instanciador\ de\ la\ propiedad\ "nombre"\r\n\ \r\n\ @param\ pNombre\ Nombre\ del\ archivo\r\n\ @return\ \r\n
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+comment5.text=\r\n\ Este\ m\u00E9todo\ main\ pone\ en\ marcha\ el\ sistema\ de\ gesti\u00F3n\ documental\r\n\ \r\n
+numComments=6

@@ -62,11 +62,11 @@ public class Archivo
         // En primer lugar damos de alta a todos los trabajadores de la organización
         Trabajador trabajador1= new Trabajador("Elisabeth López Mur",'M',"1105/1976",930000001,"elisabeth@carlemany.edu",null,(float)1700.00,"01/01/2022",false,"11223344556");
         trabajador1= new Trabajador("Elisabeth López Mur",'M',"11/05/1976",930000001,"elisabeth@carlemany.edu",null,(float)1700.00,"01/01/2022",false,"11223344556");
-    Trabajador trabajador2= new Trabajador("Raúl Soria García",'H',"10/10/1983",930000002,"raul@carlemany.edu",null,(float)1430.00,"10/04/2021",false,"11223344557");
+        Trabajador trabajador2= new Trabajador("Raúl Soria García",'H',"10/10/1983",930000002,"raul@carlemany.edu",null,(float)1430.00,"10/04/2021",false,"11223344557");
         Trabajador trabajador3= new Trabajador("Mª Elena Pérez Alhoma",'M',"21/08/1990",930000003,"elena.perez@carlemany.edu",null,(float)2200.00,"23/09/2020",false,"11223344558");
         Trabajador trabajador4= new Trabajador("Manuel Einstein Ruíz",'H',"03/03/1967",930000004,"manuel.einstein@carlemany.edu",null,(float)1950.00,"16/03/2021",false,"11223344559");
         Trabajador trabajador5= new Trabajador("Ana Mª Ávila Megía",'M',"19/05/1986",930000005,"ana.avila@carlemany.edu",null,(float)1630.00,"10/11/2020",false,"11223344560");
-        /*
+        
         // A continuación, creamos los diferentes departamentos de la organización
         Departamento direccion=new Departamento("Dirección","Dirección general de la organización", null, null);
         Departamento administracion=new Departamento("Administración", "Departamento de soporte administrativo de la organización",null, null);
@@ -105,11 +105,11 @@ public class Archivo
         System.out.println("\nMostrando ficha de trabajador/a:\n-------------------------------");
         System.out.println("ANTES: El/La trabajador/a "+trabajador5.getNombreCompleto()+" nació el "+trabajador5.getFechaNacimiento()+" y gana "+trabajador5.getSalario()+" euros");
         trabajador5.setFechaNacimiento("3/1995");
-    trabajador5.setFechaNacimiento("4/8/1990");
+        trabajador5.setFechaNacimiento("4/8/1990");
         trabajador5.setFechaAlta("2020-1");
-    trabajador5.setSalario((float)(trabajador5.getSalario()*1.10));
+        trabajador5.setSalario((float)(trabajador5.getSalario()*1.10));
         System.out.println("DESPUÉS: El/La trabajador/a "+trabajador5.getNombreCompleto()+" nació el "+trabajador5.getFechaNacimiento()+" y gana "+trabajador5.getSalario()+" euros");
-    */
+    
     }
     
     
