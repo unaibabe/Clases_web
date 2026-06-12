@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Linea
+comment1.params=linea
+comment1.target=Linea(java.lang.String)
+comment2.params=
+comment2.target=java.time.LocalDate\ getFecha()
+comment3.params=
+comment3.target=java.time.LocalTime\ getHora()
+comment4.params=
+comment4.target=java.lang.String\ getUsuario()
+comment5.params=
+comment5.target=java.lang.String\ getMensaje()
+comment6.params=
+comment6.target=java.lang.Boolean\ esOk()
+comment7.params=
+comment7.target=int\ numLetrasMensaje()
+comment8.params=
+comment8.target=int\ numPalabrasMensaje()
+numComments=9
