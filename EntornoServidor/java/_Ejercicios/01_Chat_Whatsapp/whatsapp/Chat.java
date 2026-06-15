@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
-
+import java.time.format.DateTimeFormatter;
 public class Chat
 {
     private ArrayList<Linea> conversacion;
@@ -33,8 +33,7 @@ public class Chat
         }
         
     }
-    
-    
+        
     public int getNumLetras(){
         int contadorLetras=0;
         for(Linea l: this.conversacion){
@@ -87,19 +86,25 @@ public class Chat
         
     }
     
-    public String toString(){
-        String html = new String("");
-        html = "<div class='chat'>";
-        for(Linea l: this.conversacion){
-            html += "Fecha: " + l.getFecha()+ "<br>";
-            html += "Hora: " + l.getHora()+ "<br>";
-            html += "Usuario: "+ l.getUsuario()+ "<br>";
-            html += "Mensaje: " + l.getMensaje()+ "<br>";
-            
-            
-        }
-        html+="</div>";
-        return html;
-        
+    public int numLineas(){
+        return this.numLineas;
     }
+    
+    public String toString(){
+    String html = "";
+    
+    DateTimeFormatter formatoDeseado = DateTimeFormatter.ofPattern("d/M/yyyy");
+    
+    for(Linea l: this.conversacion){
+        
+        String fechaFormateada = l.getFecha().format(formatoDeseado);  
+        html += "<div class='chat'>";
+        html += "  <div class='chat-user'>" + l.getUsuario() + "</div>";
+        html += "  <div class='chat-message'>" + l.getMensaje() + "</div>";
+        html += "  <div class='chat-meta'>" + fechaFormateada + " - " + l.getHora() + "</div>";
+        html += "</div>";
+    }
+    return html;
+}
+
 }

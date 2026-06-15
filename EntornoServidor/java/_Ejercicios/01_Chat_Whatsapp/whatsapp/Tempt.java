@@ -16,7 +16,10 @@ public class Tempt {
         // for (int i = 0; i <= participantes.length; i++) {
         // System.out.println(participantes[i]);
         // }
-        System.out.println(chat_1.toString());
+        
+        System.out.println(chat_1.getNumeroPalabras("Usuario1"));
+        //System.out.println(chat_1.toString());
+        
         // try {
         // File file = new File("C:\\xampp\\tomcat\\webapps\\ROOT\\chat.txt");
         // FileReader fileReader = new FileReader(file);
