@@ -1,0 +1,73 @@
+19/3/21 14:57 - Creaste el grupo “Los DESARROLLADORES”
+19/3/21 14:57 - Usuario3: Feliz día que lo pases muy bien 😁  
+19/3/21 15:10 - Usuario1: ¡Gracias! 😊 ¿Cómo va todo?  
+19/3/21 15:12 - Usuario4: Aquí tranquilo, disfrutando del viernes.  
+19/3/21 15:15 - Usuario2: ¿Algún plan para el finde?  
+19/3/21 16:00 - Usuario3: Yo quiero ir a la playa, pero depende del clima.  
+19/3/21 16:05 - Usuario1: En mi caso, Netflix y sofá, no falla.  
+19/3/21 16:20 - Usuario4: Clásico. Yo creo que saldré a caminar por el parque.  
+19/3/21 17:10 - Usuario2: ¿Y si hacemos una videollamada el domingo?  
+19/3/21 17:15 - Usuario1: Me parece buena idea.
+¿A qué hora?  
+19/3/21 17:30 - Usuario3: ¿6 de la tarde les parece?  
+19/3/21 18:00 - Usuario4: Perfecto. Apuntado.  
+20/3/21 09:00 - Usuario2: Buenos días, ¿cómo amanecieron?  
+20/3/21 09:15 - Usuario1: Con sueño, pero todo bien.  
+20/3/21 09:20 - Usuario3: Igual, me tomé un café y ahora estoy despierto.  
+20/3/21 09:30 - Usuario4: Yo estoy viendo el amanecer desde mi balcón, hermoso.  
+20/3/21 10:00 - Usuario2: ¡Qué envidia! Yo solo veo edificios por mi ventana 😅
+20/3/21 10:00 - Usuario2: <Archivo omitido>
+20/3/21 10:45 - Usuario1: Jajaja, al menos tienes ventana.  
+20/3/21 11:00 - Usuario3: Bueno, ¿qué tal si compartimos fotos de nuestras vistas?  
+20/3/21 11:30 - Usuario4: ¡Va! Empiezo yo. 
+20/3/21 11:45 - Usuario2: Qué lindo. Yo envío la mía.
+20/3/21 12:00 - Usuario1: La mía no es tan emocionante. 
+20/3/21 12:30 - Usuario3: La mía es playa 😎
+21/3/21 08:00 - Usuario4: ¡Buen día! ¿Listos para la videollamada de hoy?  
+21/3/21 08:30 - Usuario1: Sí, aunque antes tengo que limpiar un poco la casa.  
+21/3/21 09:00 - Usuario2: Yo voy a aprovechar para cocinar algo rico antes.  
+21/3/21 09:45 - Usuario3: ¿Qué vas a cocinar, Usuario2?  
+21/3/21 10:00 - Usuario2: Un risotto, si no quemo la cocina en el proceso.  
+21/3/21 10:15 - Usuario4: Jajaja, ya nos contarás si sobreviviste.  
+21/3/21 11:00 - Usuario1: Yo creo que Usuario2 es buen chef.  
+21/3/21 12:00 - Usuario2: Nah, solo intento. Pero gracias 😅  
+21/3/21 13:00 - Usuario3: Bueno, luego nos muestras el resultado.  
+22/3/21 09:00 - Usuario3: ¿Qué tal la videollamada de ayer?  
+22/3/21 09:15 - Usuario1: Muy divertida, ¡deberíamos repetirlo pronto!  
+22/3/21 09:30 - Usuario4: Sí, fue un buen momento.
+22/3/21 09:30 - Usuario4: <Archivo omitido>  
+22/3/21 10:00 - Usuario2: Me reí muchísimo con las historias de Usuario3.  
+22/3/21 10:15 - Usuario3: Jajaja, ya saben que soy un libro abierto.  
+22/3/21 11:00 - Usuario1: ¿Hoy cómo pinta su día?  
+22/3/21 12:00 - Usuario4: Bastante trabajo, pero todo bien.  
+22/3/21 12:30 - Usuario3: Yo igual, creo que este lunes será intenso.  
+22/3/21 13:00 - Usuario2: Por lo menos ya pasó la mañana.  
+22/3/21 13:45 - Usuario1: Eso es verdad, ánimo a todos.  
+23/3/21 07:00 - Usuario4: ¡Buenos días! ¿Cómo va la semana?  
+23/3/21 07:15 - Usuario1: Bastante tranquila, la verdad.  
+23/3/21 07:30 - Usuario2: Yo con algo de estrés, pero sobreviviendo.  
+23/3/21 08:00 - Usuario3: Ánimo, Usuario2.
+Una cosa a la vez.  
+23/3/21 08:30 - Usuario4: Eso, respira profundo.  
+23/3/21 09:00 - Usuario1: ¿Algún consejo para manejar el estrés?  
+23/3/21 09:15 - Usuario3: Yo hago ejercicio, me ayuda mucho.  
+23/3/21 10:00 - Usuario4: Escuchar música relajante también funciona.  
+23/3/21 10:30 - Usuario2: Gracias, lo intentaré.  
+24/3/21 08:00 - Usuario3: ¡Mitad de semana, amigos!  
+24/3/21 08:15 - Usuario1: ¡Por fin! Este mes se siente eterno.  
+24/3/21 08:30 - Usuario2: Jajaja, sí. Pero ya casi es viernes.  
+24/3/21 09:00 - Usuario4: ¡Viernes chiquito, hoy toca algo rico para cenar!  
+24/3/21 09:15 - Usuario1: ¿Qué tienes en mente?  
+24/3/21 10:00 - Usuario4: Tacos, siempre tacos.  
+25/3/21 07:30 - Usuario2: ¡Último día antes del viernes!  
+25/3/21 08:00 - Usuario1: Se siente como una maratón esto.  
+25/3/21 09:00 - Usuario3: Jajaja, ánimo!
+Ya casi cruzamos la meta.  
+25/3/21 10:00 - Usuario4: ¿Qué harán mañana?  
+25/3/21 11:00 - Usuario1: Yo voy a descansar.  
+26/3/21 08:00 - Usuario2: ¡Feliz viernes!  
+26/3/21 08:30 - Usuario4: ¡Lo logramos! Buen fin para todos.  
+26/3/21 09:00 - Usuario1: Gracias, igualmente 😄  
+26/3/21 09:30 - Usuario3: ¿Hacemos algo especial para celebrar?  
+26/3/21 10:00 - Usuario2: ¿Quizás otra videollamada?  
+26/3/21 11:00 - Usuario4: ¡Me parece perfecto!  
