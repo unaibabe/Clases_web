@@ -1,0 +1,34 @@
+DROP TABLE IF EXISTS `empresa`.`contactos`;
+
+CREATE TABLE `empresa`.`contactos` (
+ `codigo` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ `nombre` VARCHAR(50) NOT NULL,
+ `apellidos` VARCHAR(60) NOT NULL,
+ `altas` BOOLEAN NULL, 
+ `fechaNacimiento` DATE NULL, 
+ INDEX i_contactos_unicos (nombre, apellidos),
+ CONSTRAINT c_contactos_unicos UNIQUE (nombre, apellidos)
+) ENGINE = InnoDB;
+
+ALTER TABLE contactos DROP INDEX i_contactos_unicos;
+ALTER TABLE contactos DROP PRIMARY KEY;
+
+Alter table contactos add constraint  clave_principal Primary key (nombre, appellidos);
+
+Alter table contactos add COLUMN url varchar(50) not null;
+Alter TABLE contactos drop COLUMN url;
+
+
+--------------------------------------------------
+INSERT INTO contactos (codigo, nombre, apellidos) VALUES(1,"Juan","Garcia");
+
+INSERT INTO contactos (codigo, nombre, apellidos) VALUES 
+(2, 'María', 'López Pérez'),
+(3, 'Carlos', 'Martínez Gómez'),
+(4, 'Ana', 'Rodríguez Silva'),
+(5, 'Alejandro', 'Fernández Ruiz');
+
+UPDATE contactos SET codigo=10 WHERE (nombre LIKE "Juan") AND (apellidos LIKE "Garcia");
+UPDATE contactos set altas=1 WHERE codigo=4;
+DELETE FROM contactos WHERE codigo=5;
+UPDATE contactos SET fechaNacimiento="2026/05/04" WHERE codigo=10;
