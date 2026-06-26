@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .tarjeta {
+            width: 320px;
+            height: 500px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(34, 34, 34, 0.5);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .imagen {
+            width: 100%;
+            height: 160px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .texto {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+        hr {
+            width: 100%;
+            border: 0;
+            border-top: 1px solid #444;
+            margin: 0;
+        }
+        .contenedor-etiquetas {
+            display: flex;
+            gap: 6px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+        .etiqueta {
+            background-color: #2b5b84;
+            color: #ffde57;
+            font-weight: bold;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 0;
+        }
+        .boton {
+            background-color: #2b8432;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.25rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+            cursor: pointer;
+        }
+        p {
+            margin: 4px 0 0 0;
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="tarjeta">
+        <div class="imagen">
+            <img src="https://img.magnific.com/vector-premium/icono-python_1181510-14.jpg?semt=ais_hybrid&w=740&q=80" alt="Logo de Python">
+        </div>
+        
+        <div class="texto">
+            <h3>CURSO DE PYTHON</h3>
+            <hr>
+            <div class="contenedor-etiquetas">
+                <p class="etiqueta">Python</p>
+                <p class="etiqueta">Backend</p>
+                <p class="etiqueta">Código</p>
+            </div>
+            <p>Aprende desde los fundamentos básicos de la programación hasta el desarrollo de aplicaciones robustas con este lenguaje versátil.</p>
+            <div class="boton">Mas info</div>
+        </div>
+    </div>
+</body>
+</html>

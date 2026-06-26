@@ -25,7 +25,7 @@ public class Tempt {
         // FileReader fileReader = new FileReader(file);
         // BufferedReader buffer = new BufferedReader(fileReader);
         // String lineaW = buffer.readLine();
-        // // System.out.println(buffer.readLine());
+        // System.out.println(buffer.readLine());
 
         // Linea linea = new Linea(lineaW);
 

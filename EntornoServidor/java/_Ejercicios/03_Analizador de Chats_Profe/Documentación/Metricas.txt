@@ -1,0 +1,15 @@
+METRICAS INDIVIDUALES:
+----------------------
+Número de mensajes escritos por cada persona (JS con cuadro combinado)
+Extensión media por mensaje y usuario
+Nivel de participación?
+
+METRICAS GRUPALES:
+----------------------
+Número de mensajes escritos por todo el mundo
+Distribución de mensajes por días (Gráfica)
+Distribución de mensajes por horas del día (Gráfica)
+Nº de usuarios participantes
+Extensión media por mensaje
+Homogeneidad participativa?
+Nube de etiqueta de toda la conversación?

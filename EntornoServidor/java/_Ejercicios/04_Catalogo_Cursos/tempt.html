@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrousel</title>
+    <style>
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .tarjeta {
+        width: 320px;
+        height: 500px;
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(34, 34, 34, 0.5);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .imagen {
+        width: 100%;
+        height: 160px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .texto {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+      }
+      hr {
+        width: 100%;
+        border: 0;
+        border-top: 1px solid #444;
+        margin: 0;
+      }
+      .contenedor-etiquetas {
+        display: flex;
+        gap: 6px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 4px;
+      }
+      .etiqueta {
+        background-color: #2b5b84;
+        color: #ffde57;
+        font-weight: bold;
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin: 0;
+      }
+      .boton {
+        background-color: #2b8432;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1.25rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
+        cursor: pointer;
+      }
+      p {
+        margin: 4px 0 0 0;
+        font-size: 0.9rem;
+        color: #ccc;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tarjeta">
+      <div class="imagen">
+        <img src="https://example.com/images/python.jpg" />
+      </div>
+
+      <div class="texto">
+        <h3>Curso Completo de Python</h3>
+        <hr />
+        <div class="contenedor-etiquetas">
+          <p class="etiqueta">programacion</p>
+          <p class="etiqueta">python</p>
+          <p class="etiqueta">desarrollo</p>
+        </div>
+        <p>https://example.com/cursos/python</p>
+        <div class="boton">Mas info</div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="imagen">
+        <img src="https://example.com/images/excel.jpg" />
+      </div>
+
+      <div class="texto">
+        <h3>Excel Avanzado para Empresas</h3>
+        <hr />
+        <div class="contenedor-etiquetas">
+          <p class="etiqueta">excel</p>
+          <p class="etiqueta">ofimatica</p>
+          <p class="etiqueta">analisis</p>
+        </div>
+        <p>https://example.com/cursos/excel-avanzado</p>
+        <div class="boton">Mas info</div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="imagen">
+        <img src="https://example.com/images/marketing-digital.jpg" />
+      </div>
+
+      <div class="texto">
+        <h3>Marketing Digital desde Cero</h3>
+        <hr />
+        <div class="contenedor-etiquetas">
+          <p class="etiqueta">marketing</p>
+          <p class="etiqueta">redes-sociales</p>
+          <p class="etiqueta">publicidad</p>
+        </div>
+        <p>https://example.com/cursos/marketing-digital</p>
+        <div class="boton">Mas info</div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="imagen">
+        <img src="https://example.com/images/data-science.jpg" />
+      </div>
+
+      <div class="texto">
+        <h3>Introducción a Data Science</h3>
+        <hr />
+        <div class="contenedor-etiquetas">
+          <p class="etiqueta">data-science</p>
+          <p class="etiqueta">analitica</p>
+          <p class="etiqueta">machine-learning</p>
+        </div>
+        <p>https://example.com/cursos/data-science</p>
+        <div class="boton">Mas info</div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="imagen">
+        <img src="https://example.com/images/ux-ui.jpg" />
+      </div>
+
+      <div class="texto">
+        <h3>Diseño UX/UI Profesional</h3>
+        <hr />
+        <div class="contenedor-etiquetas">
+          <p class="etiqueta">ux</p>
+          <p class="etiqueta">ui</p>
+          <p class="etiqueta">diseno</p>
+        </div>
+        <p>https://example.com/cursos/ux-ui</p>
+        <div class="boton">Mas info</div>
+      </div>
+    </div>
+  </body>
+</html>

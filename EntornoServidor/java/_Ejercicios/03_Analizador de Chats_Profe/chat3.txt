@@ -1,0 +1,101 @@
+04/4/21 9:15 - Carlos: Buenos días! Qué tal lleváis el temario de la UF1844?
+04/4/21 11:32 - Marta: Holaaa! Bien, dándole vueltas a la arquitectura de tres capas, pero con ganas 💪
+04/4/21 12:05 - Javi: Yo ya revisando la instalación del servidor de aplicaciones para las prácticas de mañana.
+04/4/21 12:40 - Sergio: Qué vicio tenéis con el código de verdad jajaja
+04/4/21 13:15 - Javi: XXX
+04/4/21 13:17 - Carlos: Calla Sergio, que tú también te apuntarías a picar código si no fueras tan vago 😜
+04/4/21 13:45 - Sergio: Se eliminó este mensaje
+04/4/21 13:45 - Sergio: jajaja touché
+04/4/21 14:02 - Elena: Hola chicos! Cómo va la API que estamos montando? 🥰
+04/4/21 15:10 - Marta: Muy bien! Peleándome con el acceso a datos.
+05/4/21 8:02 - Carlos: Bon dia! Qué frío hace hoy en el aula no? 🥶
+05/4/21 10:45 - Andrés: Buenos días a todos, sí que han puesto fuerte el aire.
+05/4/21 12:12 - Javi: XXX
+05/4/21 12:14 - Marta: Ala que captura más limpia! Qué middleware has usado para capturar las excepciones?
+05/4/21 12:20 - Javi: Uno personalizado que configuré ayer para controlar los errores de conexión.
+05/4/21 13:02 - Carlos: Qué ganas de que funcione el despliegue completo 😍
+05/4/21 13:30 - Elena: Yo me apunto a la sesión de repaso de mañana seguro!
+05/4/21 15:40 - Marta: Sii, hay que dejar listo el script de la base de datos.
+05/4/21 16:15 - Carlos: Sii por fi 👏🏼👏🏼👏🏼
+05/4/21 21:30 - Javi: Yo si queréis os paso un par de repositorios de GitHub con ejemplos de la UF1844.
+06/4/21 11:15 - Sergio: Alguien para repasar los objetos de servidor luego en la cafetería?
+06/4/21 11:42 - Carlos: Yo hoy imposible, a tope depurando un bucle... 😭
+06/4/21 12:01 - Marta: Yo salgo tarde de trabajar hoy y no llego a la tutoría.
+06/4/21 13:22 - Javi: XXX
+06/4/21 13:25 - Sergio: Ok, pues otro día miramos lo de las variables de sesión!
+06/4/21 14:10 - Andrés: Yo me tomaría un buen café ahora mismo frente al entorno de desarrollo ☕  
+07/4/21 10:30 - Carlos: Mirad qué libro de patrones de diseño web me acabo de comprar para el curso!!
+07/4/21 12:05 - Elena: Qué chulo!!! Viene la parte de integración de servicios distribuidos?
+07/4/21 12:07 - Carlos: Sii y explica el modelo vista controlador de forma súper práctica.
+07/4/21 12:55 - Marta: Qué buena compra, os va a venir genial para la documentación de la UF1844.
+07/4/21 13:14 - Javi: XXX
+07/4/21 13:16 - Javi: Muy top. Yo tengo la versión en PDF de ese mismo autor.
+07/4/21 15:22 - Carlos: Sii, ya os lo enseñaré en clase mañana.  
+08/4/21 7:45 - Marta: Buenos días! Ya es jueves, queda nada para terminar el módulo de servidor 🥳🥳
+08/4/21 11:50 - Javi: Al final quiénes venís al laboratorio a probar los servicios web orientados a mensajes?
+08/4/21 12:10 - Carlos: Yo voy seguro! 🙋🏼‍♀️
+08/4/21 12:15 - Elena: Y yoo! Contad conmigo, que necesito validar mis formularios.
+08/4/21 13:02 - Marta: Yo también voy.
+08/4/21 13:05 - Javi: Perfecto, pues somos 4 para las pruebas de carga.
+08/4/21 13:40 - Sergio: Pasadlo muy bien y cuidado con los bucles infinitos 😂🤣
+08/4/21 22:15 - Carlos: Jajaja gracias! Llevamos el depurador bien configurado.  
+09/4/21 12:20 - Javi: XXX
+09/4/21 12:22 - Carlos: Uoooo qué limpia te ha quedado la estructura del proyecto backend.
+09/4/21 13:05 - Marta: Qué pasada el orden de las carpetas, ¿dónde has metido las clases de negocio?
+09/4/21 13:15 - Javi: Las he separado en una capa lógica independiente, como pide el temario de la UF1844.
+09/4/21 14:10 - Andrés: Buen trabajo con esa refactorización campeón 👍
+09/4/21 19:40 - Carlos: Mañana lo probamos directamente en el servidor local!
+09/4/21 20:02 - Elena: Yo acabo de terminar mi parte de la documentación por fin. 
+10/4/21 8:15 - Carlos: Ya estamos conectándonos por SSH 🚗💨
+10/4/21 9:02 - Marta: Nosotros abrimos el entorno de desarrollo ahora mismo.
+10/4/21 11:30 - Javi: XXX
+10/4/21 11:35 - Elena: Qué interfaz gráfica más limpia te ha quedado, esperadnos para hacer el GET!
+10/4/21 13:20 - Carlos: Menuda subidita de peticiones... me está lanzando error 500 ya jajaja
+10/4/21 13:22 - Marta: Venga un poco de depuración, revisa los logs que ya casi sale el JSON correcto 🏔️
+10/4/21 14:05 - Javi: XXX
+10/4/21 14:12 - Sergio: Al final habéis podido solucionar la caída del Apache?
+10/4/21 15:50 - Andrés: Qué envidia me dais, pasadlo genial programando.
+11/4/21 10:12 - Carlos: Bon dia! Menudo día espectacular hace hoy para documentar el código.
+11/4/21 11:45 - Marta: Buenos días, hoy toca relax total y repasar teoría del acceso a datos.
+11/4/21 12:30 - Javi: Yo acabo de encender el servidor de bases de datos para optimizar los índices 🔥
+11/4/21 12:32 - Elena: Qué bien os lo montáis con el SQL!
+11/4/21 13:01 - Javi: XXX
+11/4/21 13:15 - Carlos: Buenísimo el rendimiento de las consultas ahora 🤤
+11/4/21 15:40 - Sergio: Pasadme luego el script modificado de las tablas si podéis.
+11/4/21 16:02 - Javi: Subido al Git, bájatelo cuando quieras.
+11/4/21 17:25 - Marta: Vuelta a la reality... cerrando el entorno de pruebas.  
+12/4/21 9:40 - Carlos: Qué duro es el lunes post-entrega de prácticas 😭
+12/4/21 11:15 - Sergio: Se eliminó este mensaje
+12/4/21 11:16 - Sergio: A compilar se ha dicho jajaja
+12/4/21 12:45 - Javi: XXX
+12/4/21 13:10 - Marta: Totalmente de acuerdo, yo sigo cansada de revisar las trazas de error de la sesión.
+12/4/21 13:12 - Marta: Pero valió la pena ver que todo funciona!
+12/4/21 14:55 - Andrés: Alguien tiene el PDF con los criterios de evaluación de la UF1844?  
+13/4/21 11:30 - Andrés: Hola a todos, ¿sabéis si entra la parte de persistencia en el examen escrito de la UF1844?
+13/4/21 12:05 - Javi: Parece que entran los conceptos de mapeo objeto-relacional y la gestión de transacciones.
+13/4/21 12:40 - Carlos: Esperemos que no se pasen con las preguntas de código escrito a mano 🙏🏼
+13/4/21 13:15 - Marta: Sí por favor, que yo prefiero que me evalúen con el proyecto del servidor funcionando.
+13/4/21 15:02 - Elena: Ooo 👏🏼👏🏼 a ver si el profesor nos da alguna pista más!
+13/4/21 15:20 - Sergio: El año pasado cayó una pregunta de desarrollo de servicios web seguros.
+13/4/21 15:45 - Javi: Pues esa parte hay que mirársela bien entonces.
+13/4/21 16:10 - Carlos: Apuntado queda.
+14/4/21 12:10 - Carlos: Alguien sabe alguna buena práctica para securizar las cookies de sesión en el entorno servidor?
+14/4/21 12:35 - Javi: Activa siempre los flags HttpOnly y Secure en la configuración de la respuesta, mano de santo.
+14/4/21 13:02 - Marta: Sii que si no te exponen el identificador!
+14/4/21 13:14 - Carlos: Probaré a meterlo en el archivo de configuración global! 😘
+14/4/21 15:30 - Elena: Yo lo configuré ayer y funciona perfecto, no rompe nada.  
+15/4/21 10:50 - Sergio: Qué parado está el repositorio del grupo hoy no? Nadie sube commits?
+15/4/21 12:22 - Javi: XXX
+15/4/21 12:25 - Marta: Madre mía qué captura, menudo árbol de componentes te has marcado en el backend.
+15/4/21 13:01 - Carlos: Qué limpia la lógica de control!
+15/4/21 13:05 - Andrés: 👍 A optimizar las funciones que el rendimiento del servidor es clave. 
+16/4/21 8:30 - Carlos: Ya es viernes por fin!!! Se acaba la semana de prácticas de servidor 🥳🎉
+16/4/21 12:15 - Elena: Sii qué ganas de desconectar de las pantallas.
+16/4/21 13:40 - Marta: ¿Qué planes hay al final con el proyecto final del certificado?
+16/4/21 13:55 - Javi: Yo me quedo revisando el despliegue en la nube, toca darle un respiro a los servidores locales.
+16/4/21 14:10 - Carlos: Un descanso de la consola de comandos también viene bien jajaja
+17/4/21 11:05 - Marta: Por dónde andáis hoy? ¿Alguien tocando código de la UF1844?
+17/4/21 12:30 - Carlos: De paseo tranquilo, dándole un descanso al cerebro.
+17/4/21 13:15 - Javi: XXX
+18/4/21 12:02 - Carlos: Mañana ya volvemos a las clases presenciales del IFCD0210...
+18/4/21 13:15 - Javi: XXX

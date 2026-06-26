@@ -90,6 +90,10 @@ public class Chat
         return this.numLineas;
     }
     
+    public ArrayList<Linea> getConversacion(){
+        return this.conversacion;
+    }
+
     public String toString(){
     String html = "";
     

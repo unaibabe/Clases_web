@@ -1,4 +1,3 @@
-package whatsapp;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -10,10 +9,10 @@ public class Chat {
     private ArrayList<Linea> conversacion;
     private int numLineas;
 
-    public Chat(String rutaFichero)  {
+    public Chat(String rutaFichero) throws IOException {
 
         conversacion = new ArrayList<>();
-        try{
+
         File fichero = new File(rutaFichero);
         BufferedReader lectura = new BufferedReader(new FileReader(fichero));
 
@@ -30,10 +29,7 @@ public class Chat {
 
         lectura.close();
 
-        numLineas = conversacion.size();}
-        catch (IOException error){
-            System.out.println("Error al leer archivo");
-        }
+        numLineas = conversacion.size();
     }
 
     public int getNumLetras() {
@@ -121,10 +117,6 @@ public class Chat {
     // EXTRA
     public int getNumLineas() {
        return numLineas;
-    }
-
-    public ArrayList<Linea> getConversacion(){
-        return this.conversacion;
     }
 
 }
