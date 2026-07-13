@@ -1,0 +1,30 @@
+Consulta 1:
+SELECT p.NombreProducto, c.NombreCategoría
+FROM productos p
+JOIN categorias c ON p.IdCategoría = c.IdCategoría
+WHERE c.NombreCategoría LIKE 'C%'
+ORDER BY p.NombreProducto DESC;
+------------------
+Consulta 2:
+SELECT pedidos.IdPedido, pedidos.PaísDestinatario, compañia_de_envios.NombreCompañía FROM pedidos INNER JOIN compañia_de_envios ON pedidos.FormaEnvío = compañia_de_envios.IdCompañíaEnvíos 
+WHERE pedidos.PaísDestinatario = "España" AND compañia_de_envios.NombreCompañía = "Speedy Express";
+-----------
+Consulta 3:
+SELECT CONCAT (empleados.Nombre ," ", empleados.Apellidos) as nombre_completo,  COUNT(pedidos.IdEmpleado) as numeroTotalPedidos FROM empleados INNER JOIN pedidos ON empleados.IdEmpleado = pedidos.IdEmpleado
+GROUP BY empleados.IdEmpleado  ORDER BY numeroTotalPedidos  DESC LIMIT 3;
+------------------
+Consulta 4:
+SELECT SUM(detalles_de_pedidos.PrecioUnidad*detalles_de_pedidos.Cantidad) as precio_producto, DAYNAME(pedidos.FechaPedido) FROM detalles_de_pedidos INNER JOIN pedidos ON pedidos.IdPedido=detalles_de_pedidos.IdPedido 
+GROUP BY DAYNAME(pedidos.FechaPedido) ORDER BY precio_producto DESC LIMIT 1;
+------------------
+Consulta 5:
+SELECT SUM(detalles_de_pedidos.PrecioUnidad*detalles_de_pedidos.Cantidad) as precio_producto, pedidos.PaísDestinatario FROM detalles_de_pedidos INNER JOIN pedidos ON pedidos.IdPedido=detalles_de_pedidos.IdPedido 
+GROUP BY pedidos.PaísDestinatario ORDER BY precio_producto DESC LIMIT 1;
+------------------
+Consulta 6:
+SELECT productos.NombreProducto, productos.PrecioUnidad  
+FROM productos ORDER BY  productos.PrecioUnidad DESC LIMIT 1;
+------------------
+Consulta 7:
+SELECT categorias.NombreCategoría, productos.NombreProducto, productos.PrecioUnidad FROM categorias INNER JOIN productos ON productos.IdCategoría = categorias.IdCategoría
+WHERE (categorias.NombreCategoría = "Bebidas" OR categorias.NombreCategoría = "Condimentos") AND productos.PrecioUnidad <15;
