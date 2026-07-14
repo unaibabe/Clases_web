@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Receta SYSTEM "receta.dtd">
+<Receta>
+    <Nombre>Tortilla de patatas</Nombre>
+    <Descripcion>
+        La tortilla de patatas tradicional y típica, tal y como la hacen todas las madres.
+    </Descripcion>
+    <Ingredientes>
+        <Ingrediente>
+            <Cantidad unidad="pieza">3</Cantidad>
+            <Item>Patatas</Item>
+        </Ingrediente>
+        <Ingrediente>
+            <Cantidad unidad="pieza">2</Cantidad>
+            <Item>Huevos</Item>
+        </Ingrediente>
+        <Ingrediente>
+            <Cantidad unidad="litro">0.1</Cantidad>
+            <Item>Aceite</Item>
+        </Ingrediente>
+    </Ingredientes>
+    <Instrucciones>
+        <Paso>
+            Pelar y cortar la patata en rodajas
+        </Paso>
+        <Paso>
+            Poner aceite en una sartén
+        </Paso>
+    </Instrucciones>
+</Receta>

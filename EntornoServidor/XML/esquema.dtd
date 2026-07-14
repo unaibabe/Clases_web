@@ -1,0 +1,12 @@
+<!-- DTD para la receta -->
+<!ELEMENT Receta (Nombre, Descripcion?, Ingredientes?, Instrucciones?)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Descripcion (#PCDATA)>
+<!ELEMENT Ingredientes (Ingrediente+)>
+<!ELEMENT Ingrediente (Cantidad, Item)>
+<!ELEMENT Cantidad (#PCDATA)>
+    <!ATTLIST Cantidad unidad CDATA #REQUIRED>
+<!ELEMENT Item (#PCDATA)>
+<!ATTLIST Item opcional CDATA "0" vegetariano CDATA "si">
+<!ELEMENT Instrucciones (Paso+)>
+<!ELEMENT Paso (#PCDATA)>
