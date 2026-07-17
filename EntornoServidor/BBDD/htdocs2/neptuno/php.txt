@@ -1,0 +1,45 @@
+<?php
+// Configuración de la conexión a PostgreSQL
+$dsn = "pgsql:host=localhost;port=5432;dbname=Neptuno";  
+$user = "postgres";  
+$password = "postgres";  
+
+try {
+    // Crear conexión PDO
+    $pdo = new PDO($dsn, $user, $password);
+    // Configurar PDO para que lance excepciones en caso de error
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    echo "Conexión exitosa a la base de datos.<br>";
+
+    // Consulta SQL a la base de datos
+    $sql = "SELECT * FROM clientes";  // Cambia "nombre_tabla" por el nombre de tu tabla
+    $stmt = $pdo->query($sql);
+
+    // Verificar si se obtuvieron resultados
+    if ($stmt->rowCount() > 0) {
+        // Mostrar los resultados en una tabla HTML
+        echo "<table border='1'>";
+        echo "<tr><th>ID</th><th>Nombre</th><th>Email</th></tr>";  // Cambia las columnas según los campos de tu tabla
+        
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['id']) . "</td>";  // Cambia 'id' por el nombre de la columna en tu tabla
+            echo "<td>" . htmlspecialchars($row['nombre']) . "</td>";  // Cambia 'nombre'
+            echo "<td>" . htmlspecialchars($row['email']) . "</td>";  // Cambia 'email'
+            echo "</tr>";
+        }
+        
+        echo "</table>";
+    } else {
+        echo "No se encontraron registros.";
+    }
+
+} catch (PDOException $e) {
+    // Manejo de errores
+    echo "Error en la conexión: " . $e->getMessage();
+}
+
+// Cerrar conexión
+$pdo = null;
+?>

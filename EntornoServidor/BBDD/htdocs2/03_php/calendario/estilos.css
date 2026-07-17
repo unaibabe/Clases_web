@@ -1,0 +1,93 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef2f7;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.calendario{
+    width:420px;
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+    padding:20px;
+}
+
+.calendario-header{
+    display:grid;
+    grid-template-columns:50px 1fr 50px;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.calendario-header h2 {
+    text-align:center;
+    font-size:1.4rem;
+    font-weight:600;
+}
+
+.nav-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:8px;
+    background:#f0f2f5;
+    cursor:pointer;
+    font-size:20px;
+    transition:.2s;
+}
+
+.nav-btn:hover{
+    background:#dfe6ee;
+}
+
+.calendario-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:8px;
+}
+
+.dia-nombre{
+    text-align:center;
+    font-weight:bold;
+    padding:10px 0;
+    background:#e8edf5;
+    border-radius:8px;
+}
+
+.dia{
+    aspect-ratio:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+    background:white;
+}
+
+.dia:hover{
+    background:#4f8cff;
+    color:white;
+    border-color:#4f8cff;
+}
+
+.vacio{
+    background:transparent;
+    border:none;
+    cursor:default;
+}
+
+.vacio:hover{
+    background:transparent;
+}

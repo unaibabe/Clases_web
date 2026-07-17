@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Auth usuario</title>
+</head>
+<style>
+  /* Configuración general y fondo */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  /* Contenedor del formulario */
+  form {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+  }
+
+  /* Estilo del grupo de campos */
+  fieldset {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0;
+  }
+
+  /* Título del fieldset */
+  legend {
+    font-weight: 600;
+    color: #333333;
+    padding: 0 8px;
+  }
+
+  /* Etiquetas de texto */
+  label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* Campos de entrada (inputs) */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  /* Efecto al hacer clic en los inputs */
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+  }
+
+  /* Botón de envío moderno */
+  input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+
+  /* Efecto al pasar el ratón por encima del botón */
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* Efecto de pulsación al hacer clic */
+  input[type="submit"]:active {
+    transform: scale(0.98);
+  }
+
+  /* Contenedor e imagen del logotipo */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  img {
+  	margin-top: 20px;
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  /* Efecto sutil al pasar el cursor sobre la imagen accionable */
+  img:hover {
+    opacity: 0.8;
+  }
+</style>
+<body>
+
+<form id="datos" action="comprobar2.php" method="POST" > 
+
+	<fieldset>
+		<legend>Introduce datos:</legend>
+		<label for="nombre">Nombre:</label><br>
+		<input type="text" name= "nombre" placeholder="nombre" id="nombre"><br>
+		
+		<label for="clave">Contraseña:</label>
+		<input type="password" name= "clave" placeholder="contraseña" id="clave"><br>
+		
+		<input type = "submit" name ="enviar" value="Acceder"><br>
+		
+		<img alt="" src="https://paucasals.com/logo/logo2.png" onclick="document.getElementById('datos').submit();">
+		
+	</fieldset>
+
+</form>
+</body>
+</html>

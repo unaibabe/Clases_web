@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="index.php"?>
+<!DOCTYPE cursos [
+    <!ELEMENT cursos (curso+)>
+    <!ELEMENT curso (nombre, tipo, subvencion, inicio, final, duracion, dias, horas, imagen)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT subvencion (#PCDATA)>
+    <!ELEMENT inicio (#PCDATA)>
+    <!ELEMENT final (#PCDATA)>
+    <!ELEMENT duracion (#PCDATA)>
+    <!ELEMENT dias (#PCDATA)>
+    <!ELEMENT horas (#PCDATA)>
+    <!ELEMENT imagen (#PCDATA)>
+]>
+<cursos>
+    <curso>
+    
+         <nombre>INFORMATICA</nombre>
+         <tipo>Presencial</tipo>
+         <subvencion>Desempleados</subvencion>
+         <inicio>13/11/2023</inicio>
+         <final>29/02/2024</final>
+         <duracion>1185 horas</duracion>
+         <dias>Lunes a Viernes</dias>
+         <horas>9hs a 15hs</horas>
+         <imagen>"informatica.jpg"</imagen>
+
+    </curso>
+
+    <curso>
+         <nombre>INFORMATICA</nombre>
+         <tipo>Presencial</tipo>
+         <subvencion>Reciclaje</subvencion>
+         <inicio>13/11/2023</inicio>
+         <final>29/02/2024</final>
+         <duracion>1185 horas</duracion>
+         <dias>Lunes a Viernes</dias>
+         <horas>9 hs a 15hs</horas>
+         <imagen>"informatica.jpg"</imagen>
+     </curso>
+
+
+    <curso>
+         <nombre>INFORMATICA</nombre>
+         <tipo>On Line</tipo>
+         <subvencion>Desempleados/as</subvencion>
+         <inicio>02/10/2023</inicio>
+         <final>29/12/2023</final>
+         <duracion>2 meses</duracion>
+         <dias>Lunes-Miercoles-Viernes</dias>
+         <horas>14hs a 20hs</horas>
+         <imagen>"informatica.jpg"</imagen>
+    </curso>
+
+    <curso>
+         <nombre>INFORMATICA</nombre>
+         <tipo>On Line</tipo>
+         <subvencion>Reciclaje</subvencion>
+         <inicio>02/10/2023</inicio>
+         <final>29/12/2023</final>
+         <duracion>2 meses</duracion>
+         <dias>Lunes-Miercoles-Viernes</dias>
+         <horas>14hs a 20hs</horas>
+         <imagen>"informatica.jpg"</imagen>
+    </curso>  
+       
+
+
+    <curso>
+    
+         <nombre>EMERGENCIAS SANITARIAS</nombre>
+         <tipo>Presencial</tipo>
+         <subvencion>Desempleados</subvencion>
+         <inicio>13/11/2023</inicio>
+         <final>29/02/2024</final>
+         <duracion>1185 horas</duracion>
+         <dias>Lunes a Viernes</dias>
+         <horas>9hs a 15hs</horas>
+         <imagen>"emergencias.jpg"</imagen>
+
+    </curso>
+
+    <curso>
+         <nombre>EMERGENCIAS SANITARIAS</nombre>
+         <tipo>Presencial</tipo>
+         <subvencion>Reciclaje</subvencion>
+         <inicio>13/11/2023</inicio>
+         <final>29/02/2024</final>
+         <duracion>1185 horas</duracion>
+         <dias>Lunes a Viernes</dias>
+         <horas>9 hs a 15hs</horas>
+         <imagen>"emergencias.jpg"</imagen>
+    </curso>
+
+
+    <curso>
+         <nombre>EMERGENCIAS SANITARIAS</nombre>
+         <tipo>On Line</tipo>
+         <subvencion>Desempleados/as</subvencion>
+         <inicio>02/10/2023</inicio>
+         <final>29/12/2023</final>
+         <duracion>2 meses</duracion>
+         <dias>Lunes-Miercoles-Viernes</dias>
+         <horas>14hs a 20hs</horas>
+         <imagen>"emergencias.jpg"</imagen>
+    </curso>
+
+    <curso>
+         <nombre>EMERGENCIAS SANITARIAS</nombre>
+         <tipo>On Line</tipo>
+         <subvencion>Reciclaje</subvencion>
+         <inicio>02/10/2023</inicio>
+         <final>29/12/2023</final>
+         <duracion>2 meses</duracion>
+         <dias>Lunes-Miercoles-Viernes</dias>
+         <horas>14hs a 20hs</horas>
+         <imagen>"emergencias.jpg"</imagen>
+    </curso>  
+
+
+</cursos>

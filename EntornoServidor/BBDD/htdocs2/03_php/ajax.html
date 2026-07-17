@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>OpenMateo</title>
+  </head>
+  <body>
+    <div id="contenedor"></div>
+
+    <script>
+      const contenedor = document.getElementById("contenedor");
+      async function cargarPagina() {
+        try {
+          const respuesta = await fetch(
+            "https://api.open-meteo.com/v1/forecast?latitude=41.3633&longitude=2.1097&current=temperature_2m,rain,wind_speed_10m",
+          );
+          if (!respuesta.ok) {
+            throw Error("No se ha podido conectar con la web");
+          }
+          const datos = await respuesta.json();
+
+          contenedor.innerHTML = JSON.stringify(datos);
+
+          //   console.log(datos);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      cargarPagina();
+    </script>
+  </body>
+</html>
