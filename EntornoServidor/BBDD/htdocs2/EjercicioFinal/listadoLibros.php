@@ -173,6 +173,10 @@ h3 {
     ?>
 <body>
     <script>
+        async function editar(id, titulo, autor,isbn,disponible,imagen) {
+             window.location = `formularioEditarLibro.php?id=${id}&titulo=${titulo}&autor=${autor}&isbn=${isbn}&disponible=${disponible}&imagen=${imagen}`;
+            }
+
         async function eliminar(autor,isbn){
             if(confirm(`Vas a eliminar a ${autor} con isbn ${isbn}`))
             {
@@ -209,6 +213,7 @@ h3 {
     <div class="biblioteca">
     <?php
     while($dato = $resultado->fetch_assoc()){
+        $idLibro = $dato["idLibro"];
         echo "<div class='tarjeta-libro'>";
         echo "<div class='imagen-container'><img src='img/". $dato["imagen"]."'></div>";
         echo "<div class='titulo-libro'>". $dato["titulo"]."</div>";
@@ -217,7 +222,7 @@ h3 {
         echo "<div class='badge-disponible'>● ". $dato["disponible"]."</div>";
         ?>
         <div class="iconos">
-            <img id="lapiz" src="img/lapiz.svg" alt="Editar" >
+            <img id="lapiz" src="img/lapiz.svg" alt="Editar"  onclick="editar('<?=$idLibro ?>','<?=$dato['titulo'] ?>','<?=$dato['autor'] ?>','<?=$dato['isbn'] ?>','<?=$dato['disponible'] ?>','<?=$dato['imagen'] ?>')">
             <img id="papelera" src="img/papelera.svg" alt="Borrar" onclick= "eliminar('<?= $dato['autor'] ?>','<?= $dato['isbn'] ?>')">
         </div>
         <?php
